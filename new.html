@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs - IDSL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: white;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #13a538, #0ea335);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .programs-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .program {
+            display: grid;
+            grid-template-columns: 100px 300px 1fr;
+            gap: 40px;
+            align-items: start;
+            padding: 50px;
+            background: #fafafa;
+            border-left: 6px solid #13a538;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program:hover {
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transform: translateX(10px);
+        }
+
+        .program-image {
+            width: 100%;
+            height: 280px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .program:hover .program-image {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(19, 165, 56, 0.2);
+        }
+
+        .program-number {
+            font-size: 5rem;
+            font-weight: 700;
+            color: #e8f5e9;
+            line-height: 1;
+            min-width: 100px;
+        }
+
+        .program-content {
+            flex: 1;
+        }
+
+        .program-header {
+            margin-bottom: 25px;
+        }
+
+        .program-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #13a538;
+            margin-bottom: 10px;
+        }
+
+        .program-goal {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .program-goal strong {
+            color: #333;
+        }
+
+        .activities-section {
+            margin-top: 25px;
+        }
+
+        .activities-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .activities-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .activities-list li {
+            padding-left: 30px;
+            position: relative;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .activities-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #13a538;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #13a538, #0ea335);
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 45px;
+            background: white;
+            color: #13a538;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .program {
+                grid-template-columns: 1fr;
+                padding: 30px;
+                gap: 20px;
+            }
+
+            .program-image {
+                height: 220px;
+                order: -1;
+            }
+
+            .program-number {
+                font-size: 3rem;
+                min-width: auto;
+            }
+
+            .program-title {
+                font-size: 1.6rem;
+            }
+
+            .activities-list {
+                gap: 10px;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Our Core Programs</h1>
+        <p>Transforming communities through sustainable development, climate action, and social empowerment across Kenya</p>
+    </section>
+
+    <div class="container">
+        <div class="programs-wrapper">
+            
+            <div class="program">
+                <div class="program-number">01</div>
+                <img src="images/img1.jpg" alt="Sustainable Agriculture" class="program-image">
+                <div class="program-content">
+                    <div class="program-header">
+                        <h2 class="program-title">Sustainable Agriculture & Food Security</h2>
+                        <p class="program-goal"><strong>Goal:</strong> Empower farmers with resilient, eco-friendly practices.</p>
+                    </div>
+                    <div class="activities-section">
+                        <h3 class="activities-title">Key Activities</h3>
+                        <ul class="activities-list">
+                            <li>Promote agroecology (crop diversity, organic inputs, waste recycling)</li>
+                            <li>Train farmers in soil erosion control & water conservation</li>
+                            <li>Strengthen seed sovereignty & local food production</li>
+                            <li>Reduce food loss & post-harvest waste</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program">
+                <div class="program-number">02</div>
+                <img src="images/img2.jpg" alt="Climate Action" class="program-image">
+                <div class="program-content">
+                    <div class="program-header">
+                        <h2 class="program-title">Climate Action & Green Innovations</h2>
+                        <p class="program-goal"><strong>Goal:</strong> Combat climate change through adaptation & mitigation.</p>
+                    </div>
+                    <div class="activities-section">
+                        <h3 class="activities-title">Key Activities</h3>
+                        <ul class="activities-list">
+                            <li>Advocate for renewable energy (solar, biogas)</li>
+                            <li>Implement carbon sequestration (agroforestry, no-till farming)</li>
+                            <li>Support climate-smart livestock & fisheries</li>
+                            <li>Train communities in disaster risk reduction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program">
+                <div class="program-number">03</div>
+                <img src="images/img3.jpg" alt="Humanitarian Development" class="program-image">
+                <div class="program-content">
+                    <div class="program-header">
+                        <h2 class="program-title">Humanitarian & Social Development</h2>
+                        <p class="program-goal"><strong>Goal:</strong> Improve livelihoods in crisis-affected areas.</p>
+                    </div>
+                    <div class="activities-section">
+                        <h3 class="activities-title">Key Activities</h3>
+                        <ul class="activities-list">
+                            <li>Emergency food & water aid in droughts/floods</li>
+                            <li>WASH programs (clean water access, sanitation)</li>
+                            <li>Gender equality & anti-GBV initiatives</li>
+                            <li>Peacebuilding & conflict resolution in pastoral regions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program">
+                <div class="program-number">04</div>
+                <img src="images/img4.jpg" alt="Food Systems Advocacy" class="program-image">
+                <div class="program-content">
+                    <div class="program-header">
+                        <h2 class="program-title">Food Systems Transformation & Advocacy</h2>
+                        <p class="program-goal"><strong>Goal:</strong> Influence policies for a fairer, healthier food future.</p>
+                    </div>
+                    <div class="activities-section">
+                        <h3 class="activities-title">Key Activities</h3>
+                        <ul class="activities-list">
+                            <li>Promote indigenous crops & traditional diets for better nutrition</li>
+                            <li>Campaign against harmful agrochemicals & GMOs</li>
+                            <li>Lobby for pro-farmer policies & land rights</li>
+                            <li>Document & protect indigenous knowledge (ITK)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Join Us in Building a Sustainable Future!</h2>
+        <p>Together, we can create a Kenya where no one goes hungry, nature thrives, and communities prosper.</p>
+        <a href="#" class="cta-button">Get Involved</a>
+    </section>
+
+</body>
+</html>

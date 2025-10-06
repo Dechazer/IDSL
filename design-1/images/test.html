@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Vision, Mission & Values</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+
+        .main-section {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 30%, #dee2e6 70%, #f1f3f4 100%);
+        }
+
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #13a538;
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: float 8s infinite linear;
+        }
+
+        .particle:nth-child(2n) {
+            background: rgba(19, 165, 56, 0.6);
+            animation-duration: 12s;
+            width: 6px;
+            height: 6px;
+        }
+
+        .particle:nth-child(3n) {
+            background: rgba(19, 165, 56, 0.3);
+            animation-duration: 15s;
+            width: 3px;
+            height: 3px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideInUp 1s ease-out 0.3s forwards;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #13a538 0%, #1ed143 50%, #0d7a2b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(19, 165, 56, 0.3);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            font-weight: 400;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .vision-mission-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .content-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.8) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(19, 165, 56, 0.15);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideInUp 1s ease-out forwards;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(19, 165, 56, 0.1);
+        }
+
+        .content-card:nth-child(1) { animation-delay: 0.6s; }
+        .content-card:nth-child(2) { animation-delay: 0.8s; }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #13a538, #1ed143, #0d7a2b);
+            border-radius: 24px 24px 0 0;
+        }
+
+        .content-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(19, 165, 56, 0.15);
+            border-color: rgba(19, 165, 56, 0.3);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #13a538, #1ed143);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 30px rgba(19, 165, 56, 0.3);
+        }
+
+        .card-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #13a538;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(19, 165, 56, 0.3);
+        }
+
+        .card-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+
+        .mission-items {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .mission-items li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(19, 165, 56, 0.15);
+            position: relative;
+            padding-left: 30px;
+            transition: all 0.3s ease;
+            color: #495057;
+        }
+
+        .mission-items li:hover {
+            color: #13a538;
+            padding-left: 40px;
+        }
+
+        .mission-items li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #13a538;
+            font-size: 0.8rem;
+        }
+
+        .mission-items li:last-child {
+            border-bottom: none;
+        }
+
+        .values-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%);
+            border-radius: 32px;
+            padding: 60px 40px;
+            border: 1px solid rgba(19, 165, 56, 0.2);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideInUp 1s ease-out 1.2s forwards;
+            box-shadow: 0 12px 40px rgba(19, 165, 56, 0.08);
+        }
+
+        .values-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .values-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #13a538;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(19, 165, 56, 0.3);
+        }
+
+        .values-subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-item {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.8) 100%);
+            border: 1px solid rgba(19, 165, 56, 0.2);
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(19, 165, 56, 0.08);
+        }
+
+        .value-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(19, 165, 56, 0.05), transparent);
+            transition: left 0.6s;
+        }
+
+        .value-item:hover::before {
+            left: 100%;
+        }
+
+        .value-item:hover {
+            transform: translateY(-8px);
+            border-color: rgba(19, 165, 56, 0.4);
+            box-shadow: 0 15px 40px rgba(19, 165, 56, 0.15);
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #13a538, #1ed143);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 25px rgba(19, 165, 56, 0.3);
+        }
+
+        .value-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border: 2px solid rgba(19, 165, 56, 0.15);
+            border-radius: 50%;
+            animation: floatShape 20s infinite linear;
+        }
+
+        .floating-shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 5s;
+        }
+
+        .floating-shape:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 10s;
+        }
+
+        @keyframes floatShape {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateY(-50px) rotate(180deg);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vision-mission-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .content-card {
+                padding: 30px 25px;
+            }
+            
+            .values-section {
+                padding: 40px 25px;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card-title {
+                font-size: 1.8rem;
+            }
+            
+            .values-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .vision-mission-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="main-section">
+        
+
+        <div class="floating-elements">
+            <div class="floating-shape"></div>
+            <div class="floating-shape"></div>
+            <div class="floating-shape"></div>
+        </div>
+
+        <div class="container">
+            
+
+            <div class="vision-mission-container">
+                <div class="content-card">
+                    <div class="card-icon">🌟</div>
+                    <h3 class="card-title">Our Vision</h3>
+                    <p class="card-content">
+                        A thriving, food-secure society where communities live sustainably, adapt to climate challenges, and enjoy their fundamental rights to safe, nutritious food and a healthy environment.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Our Mission</h3>
+                    <p class="card-content">To transform food systems through:</p>
+                    <ul class="mission-items">
+                        <li><strong>Sustainable farming</strong> (agroecology, soil & water conservation)</li>
+                        <li><strong>Climate adaptation & mitigation</strong> (renewable energy, carbon credits)</li>
+                        <li><strong>Humanitarian & social empowerment</strong> (WASH, gender inclusion, conflict resolution)</li>
+                        <li><strong>Policy & advocacy</strong> (food sovereignty, indigenous rights, environmental protection)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="values-section">
+                <div class="values-header">
+                    <h3 class="values-title">Our Core Values</h3>
+                    <p class="values-subtitle">
+                        Our organization core values are the guiding principles that shape our culture, influence decision making and define our identity
+                    </p>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">🔍</div>
+                        <h4 class="value-title">Transparency</h4>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">⚖️</div>
+                        <h4 class="value-title">Accountability</h4>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🤝</div>
+                        <h4 class="value-title">Partnerships</h4>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🌐</div>
+                        <h4 class="value-title">Participation & Networking</h4>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">⚪</div>
+                        <h4 class="value-title">Gender Equity</h4>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🌍</div>
+                        <h4 class="value-title">Social Inclusion</h4>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">✨</div>
+                        <h4 class="value-title">Commitment to Quality</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Enhanced particle animation
+        function createParticles() {
+            const particleContainer = document.querySelector('.floating-particles');
+            
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (8 + Math.random() * 10) + 's';
+                particleContainer.appendChild(particle);
+            }
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            
+            // Observe animated elements
+            const animatedElements = document.querySelectorAll('.content-card, .values-section, .section-header');
+            animatedElements.forEach(el => observer.observe(el));
+
+            // Add hover effects to value items
+            const valueItems = document.querySelectorAll('.value-item');
+            valueItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                item.addEventListener('mouseleave', () => {
+                    item.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

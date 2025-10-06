@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <title>IDSL</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="keywords"
+      content="Befriend Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+    />
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      	function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!-- //for-mobile-apps -->
+    <link
+      href="css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link href="css/lsb.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link
+      href="//fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link rel="icon" type="image/png" href="images/LOGO.jpeg" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+ <style>
+      * {
+        margin: 0; /*helps keeping the testimonials intact*/
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      /* Testimonials Section */
+
+      .navbar {
+        background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        height: 70px;
+      }
+
+      .logo {
+        color: black;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .navbar li {
+        position: relative;
+      }
+
+      .navbar a {
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.8rem 1.2rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .navbar a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        transform: translateY(-2px);
+      }
+
+      /* Services dropdown styles */
+      .services-dropdown {
+        position: relative;
+      }
+
+      .services-link {
+        cursor: pointer;
+      }
+
+      .dropdown-icon {
+        font-size: 0.8rem;
+        transition: transform 0.3s ease;
+      }
+
+      .services-dropdown:hover .dropdown-icon {
+        transform: rotate(180deg);
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
+        min-width: 220px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        margin-top: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .services-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .dropdown-menu a {
+        color: #333;
+        padding: 1rem 1.5rem;
+        display: block;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid #f0f2f5;
+      }
+
+      .dropdown-menu a:first-child {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+
+      .dropdown-menu a:last-child {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-bottom: none;
+      }
+
+      .dropdown-menu a:hover {
+        
+        
+        transform: translateX(5px);
+      }
+
+      .dropdown-menu::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 20px;
+        width: 16px;
+        height: 16px;
+
+        transform: rotate(45deg);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: none;
+        border-bottom: none;
+      }
+
+      /* Hamburger button */
+      .menu-toggle {
+        display: none;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        
+      }
+
+      /* Responsive design */
+      @media (max-width: 998px) {
+        .navbar {
+          justify-content: flex-start; /* align items to the left */
+          flex-direction: column; /* stack logo, hamburger, and menu */
+          align-items: flex-start; /* keep everything left aligned */
+          gap: 0.5rem;
+          height: auto; /* allow height to adjust based on content */
+          padding: 1rem;
+          
+        }
+
+        .menu-toggle {
+          display: block; /* show hamburger on small screens */
+          align-self: flex-start; /* push hamburger to the left */
+          margin-left: 0;
+        }
+
+        #nav-links {
+          display: none; /* hide menu initially */
+          flex-direction: column;
+          gap: 1rem;
+          width: 100%; /* minimizes along with the screen..*/
+          background: #f0f2f5;
+          padding: 1rem;
+          border-radius: 12px;
+          align-items: flex-start; /* align nav links left */
+          text-align: left;
+          
+        }
+        #nav-links a {
+          width: 100%; /* make links full width */
+          color: #008080;
+        }
+        #nav-links.active {
+          display: flex; /* show menu when toggled */
+          
+        }
+
+        .navbar ul {
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          
+        }
+
+        .dropdown-menu {
+          position: static;
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+          box-shadow: none;
+          background: rgba(255, 255, 255, 0.1);
+          margin-top: 0.5rem;
+          display: none;
+          flex-direction: column;
+          margin-left: 20px;
+        }
+
+        .services-dropdown:hover .dropdown-menu {
+          display: block;
+        }
+      }
+
+      .hero {
+        position: relative;
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+      }
+
+      /* Backgrounds fade in/out */
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        animation: slider 25s infinite;
+        z-index: -1;
+        filter: brightness(0.6);
+      }
+
+      @keyframes slider {
+        0% {
+          background-image: url("images/img1.webp");
+        }
+        20% {
+          background-image: url("images/img2.webp");
+        }
+        40% {
+          background-image: url("images/img3.jpg");
+        }
+        60% {
+          background-image: url("images/img4.webp");
+        }
+        80% {
+          background-image: url("images/img5.jpeg");
+        }
+        100% {
+          background-image: url("images/img1.webp");
+        }
+      }
+
+      /* Text styling */
+      .hero-text {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+      }
+
+      .hero-text .slide {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        font-size: 2rem;
+        font-weight: bold;
+        background: #008080b3; /* Teal with transparency */
+        padding: 55px 25px;
+        width: 50vw;
+
+        border-radius: 10px;
+        animation: textFade 25s infinite;
+      }
+
+      /* Sync text with images */
+      .hero-text .slide:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .hero-text .slide:nth-child(2) {
+        animation-delay: 5s;
+      }
+      .hero-text .slide:nth-child(3) {
+        animation-delay: 10s;
+      }
+      .hero-text .slide:nth-child(4) {
+        animation-delay: 15s;
+      }
+      .hero-text .slide:nth-child(5) {
+        animation-delay: 20s;
+      }
+
+      @keyframes textFade {
+        0%,
+        15% {
+          opacity: 1;
+        }
+        20%,
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <!-- header -->
+    <div class="header-w3l-agile">
+      <div class="container">
+        <div class="header_left">
+          <ul>
+            <li>
+              <a href="mailto:info@example.com"
+                ><span
+                  class="glyphicon glyphicon-envelope"
+                  aria-hidden="true"
+                ></span
+                >idsl.institute@gmail.com</a
+              >
+            </li>
+            <li>
+              <span
+                class="glyphicon glyphicon-earphone"
+                aria-hidden="true"
+              ></span
+              >+254 (0) 757 506024 <span> /</span>07 07 613 302
+            </li>
+          </ul>
+        </div>
+        <div class="header_right">
+          <div class="w3ls-social-icons">
+            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+            <a class="twitter" href="https://twitter.com/idslinstitute"><i class="fa fa-twitter"></i></a>
+            <a class="instagram" href="https://twitter.com/idsl.institute"><i class="fa fa-instagram"></i></a>
+            <a class="linkedin" href="https://twitter.com/idslinstitute"><i class="fa fa-linkedin"></i></a>
+            <a class="tumblr" href="https://twitter.com/idslinstitute"><i class="fa fa-tumblr"></i></a>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- //header -->
+    <!-- banner -->
+
+    <div class="bnls">
+      <!--banner-w3ls(makes the scroll below section disappear changed to bnls)-->
+      <div class="container">
+        
+    <nav class="navbar">
+      <h1>
+                <a href="index.html">
+                  <img
+                    src="images/logo1.jpeg"
+                    alt="IDSL Logo"
+                    style="height: 50px"
+                  />
+                </a>
+                
+              </h1>
+      <!-- <a href="#" class="logo">QuickHealth</a> -->
+
+      <!-- Hamburger menu button -->
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <ul id="nav-links">
+        <li><a href="index.php">Home</a></li>
+        
+        <li class="services-dropdown">
+          <a href="#" class="services-link">
+            About Us
+            <span class="dropdown-icon">▼</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#fertility-care" data-service="general">Our Team</a>
+            <a href="#contraception-services" data-service="specialist">Our Partnership</a>
+            
+          </div>
+        </li>
+
+        <li class="services-dropdown">
+          <a href="#" class="services-link">
+            What We Do
+            <span class="dropdown-icon">▼</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#fertility-care" data-service="general">Our Programs</a>
+            <a href="#contraception-services" data-service="specialist">Our Impact</a>
+            
+          </div>
+        </li>
+        <li><a href="appointments.html">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="signup.html">Donate</a></li>
+      </ul>
+    </nav>
+        <div class="clearfix"></div>
+        <div class="scrolling-text-container">
+          <span class="label">Our Core Values:</span>
+
+          <div class="scrolling-wrapper">
+            <div class="scrolling-track">
+              <!-- Put your core values here (this is the original block that will be cloned) -->
+              <div class="marquee-original">
+                <p><span>• </span>Transparency</p>
+                <p><span>• </span> Accountability</p>
+                <p><span>• </span> Partnerships</p>
+                <p><span>• </span> Participation and networking</p>
+
+                <p><span>• </span> Social inclusion</p>
+                <p><span>• </span> Commitment to quality</p>
+
+                <!-- duplicate for seamless loop -->
+                <p><span>• </span> Human dignity</p>
+                <p><span>• </span> Equity and social inclusion</p>
+                <p><span>• </span> Inclusivity</p>
+                <p><span>• </span> Human rights</p>
+                <p><span>• </span> Non discrimination</p>
+                <p><span>• </span> Good governance</p>
+                <p><span>• </span> Non discrimination</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- //banner -->
+    <!-- bootstrap-pop-up -->
+    <section class="hero-section">
+      <div class="background-slider">
+        <div
+          class="background-slide active"
+          style="background-image: url('images/img1.jpeg')"
+        ></div>
+        <div
+          class="background-slide"
+          style="background-image: url('images/img2.jpeg')"
+        ></div>
+        <div
+          class="background-slide"
+          style="background-image: url('images/img13.jpeg')"
+        ></div>
+        <div
+          class="background-slide"
+          style="background-image: url('images/img12.jpeg')"
+        ></div>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="join-tag">Join Us Today</div>
+        <h1 class="main-title">Be part of this great change.</h1>
+        <p class="subtitle">
+          Lets ensure sustainability is attained at all cost!
+        </p>
+        <p class="description">Through unity we can make it happen.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-secondary">Reach Us</a>
+          <a href="#donate" class="btn btn-primary">Donate Now</a>
+        </div>
+      </div>
+
+      <div class="navigation-arrows arrow-left" id="prevBtn">‹</div>
+      <div class="navigation-arrows arrow-right" id="nextBtn">›</div>
+
+      <div class="slide-indicators">
+        <div class="indicator active" data-slide="0"></div>
+        <div class="indicator" data-slide="1"></div>
+        <div class="indicator" data-slide="2"></div>
+        <div class="indicator" data-slide="3"></div>
+      </div>
+    </section>
+    <!-- //bootstrap-pop-up -->
+    <div class="about-container" id="about">
+      <div class="main-header">
+        <div class="title-agileits">
+          <h3 style="color: black; font-family: 'Lora', serif">About Us</h3>
+        </div>
+      </div>
+
+      <div class="stn-grid">
+        <div class="stn-card who-we-are">
+          <h2 class="stn-title">Who We Are</h2>
+
+          <div class="stn-content">
+            <p>
+              The Institute for Development and Sustainable Livelihoods (IDSL)
+              is a national Non-Governmental Organization registered in 2024
+              pursuant to provisions of the Non Governmental Organizations
+              Co-Ordination Act of 1990 (CAP 19).
+            </p>
+            <p>
+              Our headquarters are located in Nakuru city off Nakuru-Subukia
+              Road at Bahati, second floor of the Grand Canyon Building, with a
+              provisional satellite office in Nairobi at Cianda House.
+            </p>
+
+            <p>
+              We are a forward-thinking organization dedicated to sustainable
+              agriculture, climate resilience, and equitable food systems in
+              Kenya, working with rural communities to promote agroecology,
+              green innovations, and policy advocacy.
+            </p>
+
+            <p>
+              <strong>Our motto:</strong> Engaging local communities for
+              sustainability and resilience in green development
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about -->
+    <section class="main-section-about">
+      <div class="container-about">
+        <div class="vision-mission-container">
+          <div class="content-card-about">
+            <div class="card-icon-about">
+              <i class="bi bi-eye"></i>
+            </div>
+            <h3 class="card-title-about">Our Vision</h3>
+            <p class="card-content-about">
+              A thriving, food-secure society where communities live
+              sustainably, adapt to climate challenges, and enjoy their
+              fundamental rights to safe, nutritious food and a healthy
+              environment.
+            </p>
+          </div>
+
+          <div class="content-card-about">
+            <div class="card-icon-about">
+              <i class="bi bi-lightning-charge"></i>
+            </div>
+            <h3 class="card-title-about">Our Mission</h3>
+            <p class="card-content-about">To transform food systems through:</p>
+            <ul class="mission-items-about">
+              <li>
+                <strong>Sustainable farming</strong> (agroecology, soil & water
+                conservation)
+              </li>
+              <li>
+                <strong>Climate adaptation & mitigation</strong> (renewable
+                energy, carbon credits)
+              </li>
+              <li>
+                <strong>Humanitarian & social empowerment</strong> (WASH, gender
+                inclusion, conflict resolution)
+              </li>
+              <li>
+                <strong>Policy & advocacy</strong> (food sovereignty, indigenous
+                rights, environmental protection)
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- <div class="values-section-about">
+                <div class="values-header-about">
+                    <h3 class="values-title-about">Our Core </h3>
+                    <p class="values-subtitle-about">
+                        Our organization core values are the guiding principles that shape our culture, influence decision making and define our identity
+                    </p>
+                </div>
+
+                <div class="values-grid-about">
+                    <div class="value-item-about">
+                        <div class="value-icon-about"></div>
+                        <h4 class="value-title-about">Transparency</h4>
+                    </div>
+                    <div class="value-item-about">
+                        <div class="value-icon-about"></div>
+                        <h4 class="value-title-about">Accountability</h4>
+                    </div>
+                    <div class="value-item-about">
+                        <div class="value-icon-about"></div>
+                        <h4 class="value-title-about">Accountability</h4>
+                    </div>
+                    <div class="value-item-about">
+                        <div class="value-icon-about"></div>
+                        <h4 class="value-title-about">Accountability</h4>
+                    </div>
+                </div>
+            </div> -->
+      </div>
+    </section>
+
+    <div class="about-container">
+      <section class="volunter-section">
+        <!-- Left: Image Grid -->
+        <div class="image-grid">
+          <img src="images/up.jpeg" alt="Volunteer 1" />
+          <img src="images/up1.jpeg" alt="Volunteer 2" />
+          <img src="images/img4.jpeg" alt="Volunteer 3" />
+          <img src="images/img10.jpeg" alt="Volunteer 4" />
+        </div>
+
+        <!-- Right: Content -->
+        <div class="content">
+          <h3>Why We Do It!</h3>
+
+          <p>
+            Kenya faces climate shocks, food insecurity, and social
+            inequalities, particularly in marginalized regions. By integrating
+            traditional knowledge with modern innovations, we help communities
+            build resilience, protect natural resources, and secure their right
+            to food (as enshrined in Kenya’s Constitution, Article 43).
+          </p>
+          <p>
+            Guided by the following principles, we are able to make it happen
+          </p>
+          <ul>
+            <li>Human dignity.</li>
+            <li>Equity and social inclusion.</li>
+            <li>Inclusivity.</li>
+            <li>Equality.</li>
+            <li>Human rights.</li>
+            <li>Good governance .</li>
+            <li>Sustainable development.</li>
+          </ul>
+          <a href="#" class="btn">Join With Us</a>
+        </div>
+      </section>
+      <!-- <div class="stn-grid1">
+        <div class="stn-card1 who-we-are">
+          <h2 class="stn-title">Why We Do It</h2>
+
+          <div class="stn-content1">
+            <p>
+              Kenya faces climate shocks, food insecurity, and social
+              inequalities, particularly in marginalized regions. By integrating
+              traditional knowledge with modern innovations, we help communities
+              build resilience, protect natural resources, and secure their
+              right to food (as enshrined in Kenya’s Constitution, Article 43).
+            </p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="motto-section">
+            <div class="motto-content">
+                <h2 class="motto-title">Our Motto</h2>
+                <p class="motto-text">"Engaging local communities for sustainability and resilience in green development"</p>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Our Program Section -->
+    <section class="section program-section" id="programs">
+      <div class="container">
+        <div class="title-agileits">
+          <h3
+            style="
+              color: black;
+              font-family: 'Lora', serif;
+              margin-bottom: 30px;
+            "
+          >
+            Our Programs
+          </h3>
+        </div>
+        <div class="section-content">
+          <div class="section-image">
+            <img src="images/img(1).jpg" alt="Sustainable Agriculture" />
+          </div>
+          <div class="section-text">
+            <p class="section-subtitle">
+              Empowering communities through sustainable solutions and
+              innovative approaches to create lasting positive change.
+            </p>
+            <p class="section-subtitle">
+              Combine forces in evaluating and nurting talented farmers who are
+              willing and capable to take part, to derive impactful change to
+              the society.
+            </p>
+            <p class="section-subtitle">
+              Willing and ready to take impactful change to enhance a better
+              nation through improved, sustainable farming.
+            </p>
+            <p class="section-subtitle">
+              Walk with our and discover how we make it happen!
+            </p>
+          </div>
+        </div>
+
+        <div class="programs-grid">
+          <div class="program-card">
+            <div class="program-number">i</div>
+            <h3 class="program-title">
+              Sustainable Agriculture & Food Security
+            </h3>
+            <p class="program-goal">
+              Goal: Empower farmers with resilient, eco-friendly practices.
+            </p>
+            <ul class="program-activities">
+              <li>
+                Promote agroecology (crop diversity, organic inputs, waste
+                recycling)
+              </li>
+              <li>
+                Train farmers in soil erosion control & water conservation
+              </li>
+              <li>Strengthen seed sovereignty & local food production</li>
+              <li>Reduce food loss & post-harvest waste</li>
+            </ul>
+          </div>
+
+          <div class="program-card">
+            <div class="program-number">ii</div>
+            <h3 class="program-title">Climate Action & Green Innovations</h3>
+            <p class="program-goal">
+              Goal: Combat climate change through adaptation & mitigation.
+            </p>
+            <ul class="program-activities">
+              <li>Advocate for renewable energy (solar, biogas)</li>
+              <li>
+                Implement carbon sequestration (agroforestry, no-till farming)
+              </li>
+              <li>Support climate-smart livestock & fisheries</li>
+              <li>Train communities in disaster risk reduction</li>
+            </ul>
+          </div>
+
+          <div class="program-card">
+            <div class="program-number">iii</div>
+            <h3 class="program-title">Humanitarian & Social Development</h3>
+            <p class="program-goal">
+              Goal: Improve livelihoods in crisis-affected areas.
+            </p>
+            <ul class="program-activities">
+              <li>Emergency food & water aid in droughts/floods</li>
+              <li>WASH programs (clean water access, sanitation)</li>
+              <li>Gender equality & anti-GBV initiatives</li>
+              <li>Peacebuilding & conflict resolution in pastoral regions</li>
+            </ul>
+          </div>
+
+          <div class="program-card">
+            <div class="program-number">iv</div>
+            <h3 class="program-title">
+              Food Systems Transformation & Advocacy
+            </h3>
+            <p class="program-goal">
+              Goal: Influence policies for a fairer, healthier food future.
+            </p>
+            <ul class="program-activities">
+              <li>
+                Promote indigenous crops & traditional diets for better
+                nutrition
+              </li>
+              <li>Campaign against harmful agrochemicals & GMOs</li>
+              <li>Lobby for pro-farmer policies & land rights</li>
+              <li>Document & protect indigenous knowledge (ITK)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="approach-section">
+          <h4 class="approach-title">Our Approach</h4>
+          <div class="approach-items">
+            <div class="approach-item">
+              <h4>Community-led</h4>
+              <p>
+                Farmers, women, and youth drive our programs, ensuring local
+                ownership and sustainable solutions.
+              </p>
+            </div>
+            <div class="approach-item">
+              <h4>Evidence-based</h4>
+              <p>
+                Monitoring & evaluation ensure measurable results and continuous
+                improvement in our initiatives.
+              </p>
+            </div>
+            <div class="approach-item">
+              <h4>Collaborative</h4>
+              <p>
+                Partnering with governments, NGOs, and research institutions to
+                maximize our collective impact.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Impact Section -->
+    <section class="section impact-section" id="impact">
+      <div class="container">
+        <div class="title-agileits">
+          <h3 style="color: black; font-family: 'Lora', serif">Our Impact</h3>
+        </div>
+        <div class="section-content">
+          <div class="section-image">
+            <img src="images/Img.jpg" alt="Community Impact" />
+          </div>
+          <div class="section-text">
+            <p class="section-subtitle">
+              Measuring success through tangible improvements in communities,
+              environment, and livelihoods across Kenya.
+            </p>
+
+            <div class="impact-items">
+              <div class="impact-item">
+                <p class="impact-text">
+                  Food security for vulnerable households through sustainable
+                  farming practices and emergency aid.
+                </p>
+              </div>
+              <div class="impact-item">
+                <p class="impact-text">
+                  Greener farming with higher yields & lower emissions through
+                  eco-friendly agricultural methods.
+                </p>
+              </div>
+              <div class="impact-item">
+                <p class="impact-text">
+                  Stronger communities through gender equity & conflict
+                  resolution initiatives.
+                </p>
+              </div>
+              <div class="impact-item">
+                <p class="impact-text">
+                  Policy changes supporting sustainable development and
+                  farmer-friendly legislation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="cta-section">
+                <h3 class="cta-title">Join Us in Building a Sustainable Future!</h3>
+                <p class="cta-text">Together, we can create a Kenya where no one goes hungry, nature thrives, and communities prosper.</p>
+            </div> -->
+      </div>
+    </section>
+
+    <!-- //about -->
+    <!--team-->
+    <div class="team-section">
+      <div class="container">
+        <div class="title-agileits">
+          <h3 style="color: black; font-family: 'Lora', serif">
+            Meet Our Team
+          </h3>
+          <p>
+            Our dedicated team of passionate individuals is committed to making
+            a positive impact in the lives of those we serve. Meet the people
+            behind our mission.
+          </p>
+        </div>
+
+        <div class="team-row">
+          <!-- Team Member 1 -->
+          <div class="team-card">
+            <img src="images/chair.jpg" alt="Team Member" />
+            <h3>Daniel Ndiang’ui Gitahi</h3>
+            <p>Chairperson</p>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="team-card">
+            <img src="images/peter.jpg" alt="Team Member" />
+            <h3>Peter Kuria</h3>
+            <p>Executive Board member</p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="team-card">
+            <img src="images/evans.jpg" alt="Team Member" />
+            <h3>Evans Macharia</h3>
+            <p>Secretary</p>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="team-card">
+            <img src="images/leah.jpg" alt="Team Member" />
+            <h3>Leah Wanja Mariene</h3>
+            <p>Executive Board member</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--//team-->
+
+    <!-- Donate section -->
+    <div class="process-agileits" id="donate">
+      <div class="container">
+        <div class="title-agileits">
+          <h3
+            style="font-family: 'Lora', serif; margin-bottom: 60px"
+            class="w3l-agile"
+          >
+            Save The Nation From Hunger
+          </h3>
+        </div>
+
+        <div class="process_grids">
+          <div class="col-md-6 process_left">
+            <div class="port-2 effect-1">
+              <div class="image-box">
+                <img
+                  class="img-responsive"
+                  src="https://nrpa.org.za/wp-content/uploads/2023/06/donate.jpg"
+                  alt="Image-1"
+                />
+              </div>
+              <div class="text-desc">
+                <h4>Take Part..</h4>
+                <p>
+                  Be part of this awesome change. Lets maintain a thriving,
+                  food-secure society where communities live sustainably.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 process-one">
+            <h5>Donate Now to Support</h5>
+            <p>
+              Your donation helps us empower farmers, support vulnerable
+              communities, promote green innovations, and advocate for fair food
+              systems.
+            </p>
+            <button class="donate-btn" id="openModal">Donate Now</button>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <!-- Popup Donation Form -->
+        <div class="modal" id="donationModal">
+          <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 style="color: #13a538">Make a Donation</h2>
+            <form action="donate.php" method="POST" class="donation-form">
+              <label>Full Name:</label>
+              <input type="text" name="name" required />
+
+              <label>Email:</label>
+              <input type="email" name="email" required />
+
+              <label>Amount (KES or USD):</label>
+              <input type="number" name="amount" min="1" required />
+
+              <label>Choose Payment Method:</label>
+              <select name="method" required>
+                <option value="paypal">PayPal</option>
+                <option value="mpesa">M-Pesa</option>
+              </select>
+
+              <button type="submit" class="donate-btn">
+                Proceed to Donate
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- content -->
+    <!-- <div class="content-counter" id="donate">
+      <div class="container">
+        <div class="title-agileits">
+          <h3
+            class="w3l-agile"
+            style="color: white; font-family: 'Lora', serif"
+          >
+            Donate To Us
+          </h3>
+        </div>
+        <div class="content_grids">
+          <div class="col-md-3 capabil-grid text-center">
+            <i class="fa fa-apple" aria-hidden="true"></i>
+            <div
+              class="numscroller numscroller-big-bottom"
+              data-slno="1"
+              data-min="0"
+              data-max="5700"
+              data-delay=".5"
+              data-increment="1"
+            >
+              5700
+            </div>
+            <p>Food</p>
+          </div>
+          <div class="col-md-3 capabil-grid mar-top text-center">
+            <i class="fa fa-child" aria-hidden="true"></i>
+            <div
+              class="numscroller numscroller-big-bottom"
+              data-slno="1"
+              data-min="0"
+              data-max="1700"
+              data-delay=".5"
+              data-increment="1"
+            >
+              1700
+            </div>
+            <p>Cloths</p>
+          </div>
+          <div
+            class="col-md-3 capabil-grid mar-top wow fadeInDown animated animated text-center"
+          >
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <div
+              class="numscroller numscroller-big-bottom"
+              data-slno="1"
+              data-min="0"
+              data-max="9000"
+              data-delay=".5"
+              data-increment="1"
+            >
+              9000
+            </div>
+            <p>Eyes</p>
+          </div>
+          <div
+            class="col-md-3 capabil-grid wow fadeInUp animated animated text-center"
+          >
+            <i class="fa fa-money" aria-hidden="true"></i>
+            <div
+              class="numscroller numscroller-big-bottom"
+              data-slno="1"
+              data-min="0"
+              data-max="2500"
+              data-delay=".5"
+              data-increment="1"
+            >
+              2500
+            </div>
+            <p>Money</p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- //content -->
+
+    <!-- //process -->
+
+    <!-- news -->
+    <div class="news" id="news">
+      <div class="container">
+        <div class="title-agileits">
+          <h3 style="font-family: 'Lora', serif">Recent Events</h3>
+        </div>
+
+        <div class="slider-container">
+          <!-- Left Button -->
+          <button class="nav-btn nav-left" onclick="scrollSlider(-1)">
+            &#8592;
+          </button>
+
+          <!-- Slider -->
+          <div class="slider" id="slider">
+            <div class="card">
+              <img src="images/news1.jpeg" alt="" />
+              <div class="card-content">
+                <h3>Event 1</h3>
+                <div class="meta">
+                  <i class="bi bi-calendar-event"></i> 9 September 2025
+                </div>
+                <div class="meta">
+                  <i class="bi bi-geo-alt"></i> Stanley Haven hotel, Murang'a
+                </div>
+                <p>
+                  A discussion on the Bellagio resolutions and final report on
+                  their anchoring to regenerative and agroecological transitions
+                  and sustainable financing
+                </p>
+                <button>Read More</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/event.jpg" alt="" />
+              <div class="card-content">
+                <h3>Event 1</h3>
+                <div class="meta">
+                  <i class="bi bi-calendar-event"></i> 9 September 2025
+                </div>
+                <div class="meta">
+                  <i class="bi bi-geo-alt"></i> Murang'a County
+                </div>
+                <p>
+                  GHG Accounting tool validation, on how to make operations
+                  smooth through sustainable accounting held in Muranga
+                </p>
+                <button>Read More</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/event1.jpg" alt="" />
+              <div class="card-content">
+                <h3>Event 1</h3>
+                <div class="meta">
+                  <i class="bi bi-calendar-event"></i> 9 September 2025
+                </div>
+                <div class="meta">
+                  <i class="bi bi-geo-alt"></i> Stanley Haven hotel, Murang'a
+                </div>
+                <p>
+                  A discussion on the Bellagio resolutions and final report on
+                  their anchoring to regenerative and agroecological transitions
+                  and sustainable financing
+                </p>
+                <button>Read More</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/event1.jpg" alt="" />
+              <div class="card-content">
+                <h3>Event 1</h3>
+                <div class="meta">
+                  <i class="bi bi-calendar-event"></i> 9 September 2025
+                </div>
+                <div class="meta">
+                  <i class="bi bi-geo-alt"></i> Stanley Haven hotel, Murang'a
+                </div>
+                <p>GHG tool validation in Muranga</p>
+                <button>Read More</button>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/news.jpeg" alt="" />
+              <div class="card-content">
+                <h3>Event 1</h3>
+                <div class="meta">
+                  <i class="bi bi-calendar-event"></i> 9 September 2025
+                </div>
+                <div class="meta">
+                  <i class="bi bi-geo-alt"></i> Stanley Haven hotel, Murang'a
+                </div>
+                <p>
+                  A discussion on the Bellagio resolutions and final report on
+                  their anchoring to regenerative and agroecological transitions
+                  and sustainable financing
+                </p>
+                <button>Read More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Button -->
+          <button class="nav-btn nav-right" onclick="scrollSlider(1)">
+            &#8594;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- //news -->
+
+    <!-- feed -->
+    <div class="feeds-flicker-agile">
+  <div class="container">
+    <div class="title-agileits">
+      <h3 style="font-family: 'Lora', serif" class="w3l-agile">
+        People Says
+      </h3>
+    </div>
+    <div class="flex-slider">
+      <ul id="flexiselDemo1">
+
+        <!-- Testimonial 1 -->
+        <li>
+          <div class="laptop">
+            <div class="col-md-4 team-left">
+              <img class="img-responsive" src="images/t1.jpg" alt=" " />
+            </div>
+            <div class="col-md-8 team-right">
+              <p>
+                “IDSL has done empowement through, eco-friendly
+                practices through agroecology, soil conservation, and water
+                management. Our community is more food secure than ever.”
+              </p>
+              <h5>Federica – Beneficiary</h5>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </li>
+
+        <!-- Testimonial 2 -->
+        <li>
+          <div class="laptop">
+            <div class="col-md-4 team-left">
+              <img class="img-responsive" src="images/t4.jpg" alt=" " />
+            </div>
+            <div class="col-md-8 team-right">
+              <p>
+                “Through IDSL’s climate action programs, we’ve adopted
+                renewable energy and green innovations that reduce emissions
+                and strengthen resilience to climate change.”
+              </p>
+              <h5>Thompson – Community Member</h5>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </li>
+
+        <!-- Testimonial 3 -->
+        <li>
+          <div class="laptop">
+            <div class="col-md-4 team-left">
+              <img class="img-responsive" src="images/t3.jpg" alt=" " />
+            </div>
+            <div class="col-md-8 team-right">
+              <p>
+                “IDSL’s humanitarian support, especially in WASH and gender
+                inclusion, has brought dignity and equality to our community.”
+              </p>
+              <h5>Leah – Women’s Group Leader</h5>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <!-- //feed -->
+
+    <!---------BLOG SECTION-->
+    <section class="blog-section" id="blog">
+      <div class="blog-header">
+        <div class="container">
+          <div class="title-agileits">
+            <h3
+              style="font-family: 'Lora', serif; color: black"
+              class="w3l-agile"
+            >
+              Our Blog & Insights
+            </h3>
+          </div>
+        </div>
+
+        <div class="blog-container">
+          <!-- Blog Post -->
+          <div class="blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+              alt="Agriculture"
+            />
+            <div class="blog-content">
+              <span class="tag">Sustainable Agriculture</span>
+              <h3>Empowering Farmers with Agroecology</h3>
+              <p>
+                How IDSL trains rural communities in soil & water conservation,
+                seed sovereignty, and reducing food waste.
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <!-- Blog Post -->
+          <div class="blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9"
+              alt="Climate Action"
+            />
+            <div class="blog-content">
+              <span class="tag">Climate Action</span>
+              <h3>Green Innovations for a Resilient Future</h3>
+              <p>
+                Exploring renewable energy, carbon credits, and disaster risk
+                reduction in Kenya, to ensure a better nation.
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </div>
+
+          <!-- Blog Post -->
+          <div class="blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c"
+              alt="Humanitarian Support"
+            />
+            <div class="blog-content">
+              <span class="tag">Humanitarian Support</span>
+              <h3>Restoring Dignity Through Social Empowerment</h3>
+              <p>
+                From WASH to gender equality and peacebuilding — how IDSL
+                supports vulnerable communities.
+              </p>
+              <a href="#" class="read-more">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---------BLOG SECTION ENDS-->
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="col-md-3 footer-left-agileits">
+        <img src="images/logo1.jpeg" alt="IDSL Logo" style="height: 50px" />
+        <h3 style="font-family: 'Lora', serif">Address</h3>
+        <ul>
+          <li>
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+            Nakuru city off Nakuru-Subukia Road,Grand Canyon Building. Seconf Floor.
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span
+            ><a href="mailto:info@example.com">idsl.institute@gmail.com </a>
+          </li>
+          <li>
+            <span
+              class="glyphicon glyphicon-earphone"
+              aria-hidden="true"
+            ></span>
+            +254 (0) 757 506024
+          </li>
+          <li>
+            <span
+              class="glyphicon glyphicon-earphone"
+              aria-hidden="true"
+            ></span>
+            0707613302      
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 footer-left-agileits" style="margin: auto">
+        <h3 style="font-family: 'Lora', serif">Quick Links</h3>
+        <ul>
+          <li>
+            <a
+              href="mailto:info@example.com"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:info@example.com"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              About
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="mailto:info@example.com"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="mailto:info@example.com"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              Donate
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:info@example.com"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              Our Impact
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:info@example.com"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              News & Events
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 footer-left-agileinfo">
+        <h3 style="font-family: 'Lora', serif">Get In Touch</h3>
+        <p>Visit us anytime connect with us anytime.</p>
+        <ul class="social-icons">
+          <li><a href="#" class="icon icon-border facebook"></a></li>
+          <li><a href="https://twitter.com/idslinstitute" class="icon icon-border twitter"></a></li>
+          <li><a href="https://instagram.com/idsl.institute" class="icon icon-border instagram"></a></li>
+          <li><a href="#" class="icon icon-border pinterest"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 footer-left-w3-agileits">
+        <h3 style="font-family: 'Lora', serif">Newsletter</h3>
+        <p>Subscribe to our newsletter for daily updates</p>
+        
+
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email"
+            required
+            id="newsletterEmail"
+          />
+          <input type="submit" value="Submit" />
+        </form>
+        <p
+          id="newsletterMessage"
+          style="margin-top: 10px; font-size: 0.95rem"
+        ></p>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+    <!-- //footer -->
+    <div class="copyright-w3-agile">
+      <div class="container">
+        <p>
+          © 2025 IDSL. All rights reserved | Design by
+          <a href="">DechazDev</a>
+        </p>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- start-smoth-scrolling -->
+    <div id="preloader"></div>
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/numscroller-1.0.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Q1UQnLj04A6nmI09HeU3Xf2KqcpFgVmv4++C6bqITnVdFMF3E2aRm59pkl0nUtyr"
+      crossorigin="anonymous">
+    </script>
+    <script src="js/lsb.min.js"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const serviceLinks = document.querySelectorAll(".services-link");
+
+  serviceLinks.forEach(link => {
+    const dropdownMenu = link.nextElementSibling;
+
+    // Toggle menu on click
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // prevent link jump
+      dropdownMenu.classList.toggle("show");
+    });
+
+    // Close if clicking outside
+    document.addEventListener("click", function (e) {
+      if (!link.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove("show");
+      }
+    });
+  });
+});
+</script>
+
+    <script>
+      function subscribeNewsletter(event) {
+        event.preventDefault(); // prevent form from refreshing
+
+        const emailInput = document.getElementById("newsletterEmail");
+        const message = document.getElementById("newsletterMessage");
+
+        // Basic success response
+        message.textContent = `✅ Thank you! ${emailInput.value} has been successfully subscribed.`;
+        message.style.color = "yellowgreen";
+
+        // Clear input
+        emailInput.value = "";
+        setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+    </script>
+
+    <script>
+      // Open modal
+      document.getElementById("openModal").onclick = function () {
+        document.getElementById("donationModal").style.display = "flex";
+      };
+
+      // Close modal
+      document.getElementById("closeModal").onclick = function () {
+        document.getElementById("donationModal").style.display = "none";
+      };
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        let modal = document.getElementById("donationModal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+    <script>
+      $(window).load(function () {
+        $.fn.lightspeedBox();
+      });
+    </script>
+    <!-- //js -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+          event.preventDefault();
+          $("html,body").animate(
+            { scrollTop: $(this.hash).offset().top },
+            1000
+          );
+        });
+      });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+      let currentTestimonial = 0;
+      const totalTestimonials = 5;
+      let autoSlideInterval;
+
+      function updateTestimonial() {
+        const track = document.querySelector(".testimonial-track");
+        const dots = document.querySelectorAll(".pagination-dot");
+
+        // Move the track
+        track.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+
+        // Update active dot
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentTestimonial);
+        });
+      }
+
+      function changeTestimonial(direction) {
+        currentTestimonial += direction;
+
+        if (currentTestimonial >= totalTestimonials) {
+          currentTestimonial = 0;
+        } else if (currentTestimonial < 0) {
+          currentTestimonial = totalTestimonials - 1;
+        }
+
+        updateTestimonial();
+        resetAutoSlide();
+      }
+
+      function goToTestimonial(index) {
+        currentTestimonial = index;
+        updateTestimonial();
+        resetAutoSlide();
+      }
+
+      function nextTestimonial() {
+        changeTestimonial(1);
+      }
+
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(nextTestimonial, 5000);
+      }
+
+      function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+      }
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", function () {
+        updateTestimonial();
+        startAutoSlide();
+
+        // Pause auto-slide on hover
+        const container = document.querySelector(".testimonials-container");
+        container.addEventListener("mouseenter", () =>
+          clearInterval(autoSlideInterval)
+        );
+        container.addEventListener("mouseleave", startAutoSlide);
+      });
+
+      // Touch/Swipe support for mobile
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      document.addEventListener("touchstart", function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+
+      document.addEventListener("touchend", function (e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      });
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            changeTestimonial(1); // Swipe left - next
+          } else {
+            changeTestimonial(-1); // Swipe right - previous
+          }
+        }
+      }
+    </script>
+    <script>
+      const slider = document.getElementById("slider");
+      function scrollSlider(direction) {
+        const scrollAmount = 620; // card width + margin
+        slider.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+      }
+    </script>
+
+    <script>
+      class HeroSlider {
+        constructor() {
+          this.currentSlide = 0;
+          this.slides = document.querySelectorAll(".background-slide");
+          this.indicators = document.querySelectorAll(".indicator");
+          this.prevBtn = document.getElementById("prevBtn");
+          this.nextBtn = document.getElementById("nextBtn");
+          this.contentWrapper = document.querySelector(".content-wrapper");
+
+          this.slideContent = [
+            {
+              tag: "Sustainable Agriculture",
+              title: "Empowering Farmers, Securing Food.",
+              subtitle:
+                "Promoting agroecology and eco-friendly practices for resilient livelihoods.",
+              description:
+                "We train communities in soil and water conservation, seed sovereignty, and reducing post-harvest losses.",
+            },
+            {
+              tag: "Climate Action",
+              title: "Innovating for a Greener Tomorrow.",
+              subtitle:
+                "Building resilience against climate shocks through adaptation and mitigation.",
+              description:
+                "From renewable energy to agroforestry, we support climate-smart solutions that protect people and the planet.",
+            },
+            {
+              tag: "Humanitarian Support",
+              title: "Restoring Dignity, Rebuilding Lives.",
+              subtitle:
+                "Responding to crises with compassion and sustainable solutions.",
+              description:
+                "We provide emergency aid, clean water, gender inclusion, and peacebuilding for vulnerable communities.",
+            },
+            {
+              tag: "Advocacy & Policy",
+              title: "Transforming Food Systems Together.",
+              subtitle:
+                "Shaping policies that protect farmers, indigenous knowledge, and the environment.",
+              description:
+                "Through advocacy and collaboration, we promote food sovereignty, equity, and sustainable development.",
+            },
+          ];
+
+          this.init();
+        }
+
+        init() {
+          this.prevBtn.addEventListener("click", () => this.prevSlide());
+          this.nextBtn.addEventListener("click", () => this.nextSlide());
+
+          this.indicators.forEach((indicator, index) => {
+            indicator.addEventListener("click", () => this.goToSlide(index));
+          });
+
+          // Auto-play functionality
+          setInterval(() => {
+            this.nextSlide();
+          }, 6000);
+        }
+
+        updateContent(slideIndex) {
+          const content = this.slideContent[slideIndex];
+          const tag = document.querySelector(".join-tag");
+          const title = document.querySelector(".main-title");
+          const subtitle = document.querySelector(".subtitle");
+          const description = document.querySelector(".description");
+
+          // Add fade-out effect
+          tag.classList.add("text-fade-out");
+          title.classList.add("text-fade-out");
+          subtitle.classList.add("text-fade-out");
+          description.classList.add("text-fade-out");
+
+          setTimeout(() => {
+            tag.textContent = content.tag;
+            title.textContent = content.title;
+            subtitle.textContent = content.subtitle;
+            description.textContent = content.description;
+
+            // Add fade-in effect
+            tag.classList.remove("text-fade-out");
+            title.classList.remove("text-fade-out");
+            subtitle.classList.remove("text-fade-out");
+            description.classList.remove("text-fade-out");
+
+            tag.classList.add("text-fade-in");
+            title.classList.add("text-fade-in");
+            subtitle.classList.add("text-fade-in");
+            description.classList.add("text-fade-in");
+          }, 300);
+
+          setTimeout(() => {
+            tag.classList.remove("text-fade-in");
+            title.classList.remove("text-fade-in");
+            subtitle.classList.remove("text-fade-in");
+            description.classList.remove("text-fade-in");
+          }, 1100);
+        }
+
+        goToSlide(slideIndex) {
+          this.slides[this.currentSlide].classList.remove("active");
+          this.indicators[this.currentSlide].classList.remove("active");
+
+          this.currentSlide = slideIndex;
+
+          this.slides[this.currentSlide].classList.add("active");
+          this.indicators[this.currentSlide].classList.add("active");
+
+          this.updateContent(this.currentSlide);
+        }
+
+        nextSlide() {
+          const nextIndex = (this.currentSlide + 1) % this.slides.length;
+          this.goToSlide(nextIndex);
+        }
+
+        prevSlide() {
+          const prevIndex =
+            this.currentSlide === 0
+              ? this.slides.length - 1
+              : this.currentSlide - 1;
+          this.goToSlide(prevIndex);
+        }
+      }
+
+      // Initialize the slider when DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        new HeroSlider();
+      });
+    </script>
+    <script>
+      const texts = [
+        "Sustainable farming for better lifestyle..",
+        "Join Us in Building a Sustainable Future.",
+        "Together, let's create a Kenya where no one goes hungry",
+        "A nation where nature thrives, and communities prosper.",
+      ];
+      let count = 0;
+      let index = 0;
+      let currentText = "";
+      let letter = "";
+      let speed = 110; // typing speed (ms per letter)
+
+      function type() {
+        if (count === texts.length) {
+          count = 0; // loop back to first word
+        }
+        currentText = texts[count];
+        letter = currentText.slice(0, ++index);
+
+        document.getElementById("typing-text").textContent = letter;
+
+        if (letter.length === currentText.length) {
+          // pause before deleting
+          setTimeout(() => {
+            erase();
+          }, 3000);
+        } else {
+          setTimeout(type, speed);
+        }
+      }
+
+      function erase() {
+        letter = currentText.slice(0, --index);
+        document.getElementById("typing-text").textContent = letter;
+
+        if (letter.length === 0) {
+          count++;
+          setTimeout(type, 500); // pause before typing next word
+        } else {
+          setTimeout(erase, 80); // delete speed
+        }
+      }
+
+      type();
+    </script>
+
+    <script>
+      (function () {
+        // Config: adjust speed (pixels per second)
+        const PIXELS_PER_SECOND = 120; // higher = faster
+
+        function setupMarquee() {
+          const wrapper = document.querySelector(".scrolling-wrapper");
+          if (!wrapper) return;
+          const track = wrapper.querySelector(".scrolling-track");
+
+          // Wrap initial children into marquee-original if not already
+          let original = track.querySelector(".marquee-original");
+          if (!original) {
+            original = document.createElement("div");
+            original.className = "marquee-original";
+            while (track.firstChild) original.appendChild(track.firstChild);
+            track.appendChild(original);
+          }
+
+          // Remove any old clones to rebuild cleanly
+          track.querySelectorAll(".marquee-clone").forEach((n) => n.remove());
+
+          // Measure widths (force layout)
+          const wrapperW = wrapper.getBoundingClientRect().width;
+          const origW = original.getBoundingClientRect().width;
+
+          // Ensure at least two copies exist and that the track covers visible area when moving:
+          // keep cloning original until track.scrollWidth >= wrapperWidth + originalWidth
+          let trackWidth = original.getBoundingClientRect().width;
+          while (trackWidth < wrapperW + origW) {
+            const clone = original.cloneNode(true);
+            clone.className = "marquee-clone";
+            track.appendChild(clone);
+            trackWidth += origW;
+            // safety guard to prevent infinite loops
+            if (track.children.length > 20) break;
+          }
+
+          // Set CSS variables used by the animation
+          // distance to move per loop = width of one original block
+          track.style.setProperty("--marquee-distance", origW + "px");
+
+          // duration = distance / speed (so movement is consistent regardless of content length)
+          const durationSec = origW / PIXELS_PER_SECOND;
+          track.style.setProperty("--marquee-duration", durationSec + "s");
+          // set animation-duration explicitly (for browsers that don't pick up custom property in shorthand)
+          track.style.animationDuration = durationSec + "s";
+        }
+
+        // initialize and re-run on resize (debounced)
+        let resizeTimer;
+        function init() {
+          setupMarquee();
+          window.addEventListener("resize", () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(setupMarquee, 150);
+          });
+        }
+
+        // run when DOM ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", init);
+        } else {
+          init();
+        }
+      })();
+    </script>
+
+    <script>
+      // You can also use "$(window).load(function() {"
+      $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+          auto: true,
+          pager: false,
+          nav: true,
+          speed: 500,
+          namespace: "callbacks",
+          before: function () {
+            $(".events").append("<li>before event fired.</li>");
+          },
+          after: function () {
+            $(".events").append("<li>after event fired.</li>");
+          },
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(window).load(function () {
+        $("#flexiselDemo1").flexisel({
+          visibleItems: 2,
+          animationSpeed: 1000,
+          autoPlay: true,
+          autoPlaySpeed: 3000,
+          pauseOnHover: true,
+          enableResponsiveBreakpoints: true,
+          responsiveBreakpoints: {
+            portrait: {
+              changePoint: 480,
+              visibleItems: 1,
+            },
+            landscape: {
+              changePoint: 640,
+              visibleItems: 1,
+            },
+            tablet: {
+              changePoint: 991,
+              visibleItems: 1,
+            },
+          },
+        });
+      });
+    </script>
+    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+    <!-- smooth scrolling -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        /*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+        $().UItoTop({ easingType: "easeOutQuart" });
+      });
+    </script>
+    <a href="#" id="toTop" style="display: block">
+      <span id="toTopHover" style="opacity: 1"> </span
+    ></a>
+    <!-- //smooth scrolling -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+  </body>
+</html>
