@@ -508,7 +508,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <p class="subtitle">
           Lets ensure sustainability is attained at all cost!
         </p>
-        <p class="description">Through unity we can make it happen.</p>
+        
         <div class="cta-buttons">
           <a href="contact.html" class="btn btn-secondary">Reach Us</a>
           <a href="donate.html" class="btn btn-primary">Donate Now</a>
@@ -743,7 +743,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               </div>
               
             </div>
-           <a href="purpose.html" class="learn-more-btn" style="margin-top: 30px;">Learn More</a>
+           <a href="impact.html" class="learn-more-btn" style="margin-top: 30px;">Learn More</a>
             
           </div>
           
@@ -1365,32 +1365,28 @@ document.addEventListener("DOMContentLoaded", function () {
               title: "Empowering Farmers, Securing Food.",
               subtitle:
                 "Promoting agroecology and eco-friendly practices for resilient livelihoods.",
-              description:
-                "We train communities in soil and water conservation, seed sovereignty, and reducing post-harvest losses.",
+              
             },
             {
               tag: "Climate Action",
               title: "Innovating for a Greener Tomorrow.",
               subtitle:
                 "Building resilience against climate shocks through adaptation and mitigation.",
-              description:
-                "From renewable energy to agroforestry, we support climate-smart solutions that protect people and the planet.",
+              
             },
             {
               tag: "Humanitarian Support",
               title: "Restoring Dignity, Rebuilding Lives.",
               subtitle:
                 "Responding to crises with compassion and sustainable solutions.",
-              description:
-                "We provide emergency aid, clean water, gender inclusion, and peacebuilding for vulnerable communities.",
+              
             },
             {
               tag: "Advocacy & Policy",
               title: "Transforming Food Systems Together.",
               subtitle:
                 "Shaping policies that protect farmers, indigenous knowledge, and the environment.",
-              description:
-                "Through advocacy and collaboration, we promote food sovereignty, equity, and sustainable development.",
+              
             },
           ];
 
@@ -1416,19 +1412,19 @@ document.addEventListener("DOMContentLoaded", function () {
           const tag = document.querySelector(".join-tag");
           const title = document.querySelector(".main-title");
           const subtitle = document.querySelector(".subtitle");
-          const description = document.querySelector(".description");
+          
 
           // Add fade-out effect
           tag.classList.add("text-fade-out");
           title.classList.add("text-fade-out");
           subtitle.classList.add("text-fade-out");
-          description.classList.add("text-fade-out");
+          
 
           setTimeout(() => {
             tag.textContent = content.tag;
             title.textContent = content.title;
             subtitle.textContent = content.subtitle;
-            description.textContent = content.description;
+            
 
             // Add fade-in effect
             tag.classList.remove("text-fade-out");
@@ -1439,14 +1435,14 @@ document.addEventListener("DOMContentLoaded", function () {
             tag.classList.add("text-fade-in");
             title.classList.add("text-fade-in");
             subtitle.classList.add("text-fade-in");
-            description.classList.add("text-fade-in");
+            
           }, 300);
 
           setTimeout(() => {
             tag.classList.remove("text-fade-in");
             title.classList.remove("text-fade-in");
             subtitle.classList.remove("text-fade-in");
-            description.classList.remove("text-fade-in");
+            
           }, 1100);
         }
 
@@ -1481,52 +1477,7 @@ document.addEventListener("DOMContentLoaded", function () {
         new HeroSlider();
       });
     </script>
-    <script>
-      const texts = [
-        "Sustainable farming for better lifestyle..",
-        "Join Us in Building a Sustainable Future.",
-        "Together, let's create a Kenya where no one goes hungry",
-        "A nation where nature thrives, and communities prosper.",
-      ];
-      let count = 0;
-      let index = 0;
-      let currentText = "";
-      let letter = "";
-      let speed = 110; // typing speed (ms per letter)
-
-      function type() {
-        if (count === texts.length) {
-          count = 0; // loop back to first word
-        }
-        currentText = texts[count];
-        letter = currentText.slice(0, ++index);
-
-        document.getElementById("typing-text").textContent = letter;
-
-        if (letter.length === currentText.length) {
-          // pause before deleting
-          setTimeout(() => {
-            erase();
-          }, 3000);
-        } else {
-          setTimeout(type, speed);
-        }
-      }
-
-      function erase() {
-        letter = currentText.slice(0, --index);
-        document.getElementById("typing-text").textContent = letter;
-
-        if (letter.length === 0) {
-          count++;
-          setTimeout(type, 500); // pause before typing next word
-        } else {
-          setTimeout(erase, 80); // delete speed
-        }
-      }
-
-      type();
-    </script>
+    
 
     <script>
       (function () {
