@@ -36,18 +36,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             scroll-behavior: smooth;
         }
 
-        /* Testimonials Section */
+       body {
+        padding-top: 120px; /* total height of header + navbar */
+      }
+      
 
-        .navbar {
-            background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            position: relative;
-            height: 70px;
-        }
+      .navbar {
+        position: fixed;
+        top: 50px; /* adjust based on header height */
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        height: 70px;
+        z-index: 1000;
+      }
 
         .logo {
             color: black;
@@ -84,6 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             transform: translateY(-2px);
+            color: #13a538;
         }
 
         /* Services dropdown styles */
@@ -148,7 +156,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
 
         .dropdown-menu a:hover {
-            transform: translateX(5px);
+            transform: translateX(2px);
         }
 
         .dropdown-menu::before {
@@ -397,7 +405,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <nav class="navbar">
                 <h1>
-                    <a href="home.html">
+                    <a href="index.html">
                         <img src="images/logo1.jpeg" alt="IDSL Logo" style="height: 50px" />
                     </a>
                 </h1>
@@ -407,7 +415,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <button class="menu-toggle" id="menu-toggle">☰</button>
 
                 <ul id="nav-links">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
 
                     <li class="services-dropdown">
                         <a href="#" class="services-link">
@@ -415,7 +423,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span class="dropdown-icon">▼</span>
                         </a>
                         <div class="dropdown-menu">
-                            <a href="about2.html" data-service="general">Our Team</a>
+                            <a href="team.html" data-service="general">Our Team</a>
                             <a href="purpose.html" data-service="specialist">Our Purpose</a>
                         </div>
                     </li>
@@ -430,9 +438,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="impact.html" data-service="specialist">Our Impact</a>
                         </div>
                     </li>
-                    <li><a href="blog.html">Blog</a></li>
+                    
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="donate.html">Donate</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
             <div class="clearfix"></div>
@@ -458,24 +467,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </p>
             </div>
 
-            <!-- <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">
-                    All Events
-                </button>
-                <button class="filter-btn" data-filter="training">
-                    Training & Workshops
-                </button>
-                <button class="filter-btn" data-filter="community">
-                    Community Engagement
-                </button>
-                <button class="filter-btn" data-filter="policy">
-                    Policy & Advocacy
-                </button>
-                <button class="filter-btn" data-filter="environmental">
-                    Environmental Conservation
-                </button>
-            </div> -->
-
+           
             <div class="events-grid active" id="gridView"></div>
 
             <div class="load-more-container">
@@ -492,7 +484,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul>
                 <li>
                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                    Nakuru city off Nakuru-Subukia Road,Grand Canyon Building. Seconf
+                    Nakuru city off Nakuru-Subukia Road,Grand Canyon Building. Second
                     Floor.
                 </li>
                 <li>
@@ -511,46 +503,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="col-md-3 footer-left-agileits" style="margin: auto">
             <h3 style="font-family: 'Lora', serif">Quick Links</h3>
-            <ul>
-                <li>
-                    <a href="mailto:info@example.com" style="text-decoration: none"
-                        onmouseover="this.style.color='#34a853'" onmouseout="this.style.color='white'">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:info@example.com" style="text-decoration: none"
-                        onmouseover="this.style.color='#34a853'" onmouseout="this.style.color='white'">
-                        About
-                    </a>
-                </li>
+           <ul>
+          <li>
+            <a
+              href="index.html"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="index.html"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              About
+            </a>
+          </li>
 
-                <li>
-                    <a href="mailto:info@example.com" style="text-decoration: none"
-                        onmouseover="this.style.color='#34a853'" onmouseout="this.style.color='white'">
-                        Contact
-                    </a>
-                </li>
+          <li>
+            <a
+              href="contact.html"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              Contact
+            </a>
+          </li>
 
-                <li>
-                    <a href="mailto:info@example.com" style="text-decoration: none"
-                        onmouseover="this.style.color='#34a853'" onmouseout="this.style.color='white'">
-                        Donate
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:info@example.com" style="text-decoration: none"
-                        onmouseover="this.style.color='#34a853'" onmouseout="this.style.color='white'">
-                        Our Impact
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:info@example.com" style="text-decoration: none"
-                        onmouseover="this.style.color='#34a853'" onmouseout="this.style.color='white'">
-                        News & Events
-                    </a>
-                </li>
-            </ul>
+          <li>
+            <a
+              href="donate.html"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              Donate
+            </a>
+          </li>
+          <li>
+            <a
+              href="impact.html"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              Our Impact
+            </a>
+          </li>
+          <li>
+            <a
+              href="events.html"
+              style="text-decoration: none"
+              onmouseover="this.style.color='#34a853'"
+              onmouseout="this.style.color='white'"
+            >
+              News & Events
+            </a>
+          </li>
+        </ul>
         </div>
         <div class="col-md-3 footer-left-agileinfo">
             <h3 style="font-family: 'Lora', serif">Get In Touch</h3>
@@ -570,12 +586,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h3 style="font-family: 'Lora', serif">Newsletter</h3>
             <p>Subscribe to our newsletter for daily updates</p>
 
-            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
-                <input type="email" class="newsletter-input" placeholder="Enter your email" required
-                    id="newsletterEmail" />
-                <input type="submit" value="Submit" />
-            </form>
-            <p id="newsletterMessage" style="margin-top: 10px; font-size: 0.95rem"></p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)" style="flex-direction: row;">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email"
+            required
+            id="newsletterEmail"
+          />
+          <input type="submit" value="Submit" />
+        </form>
+        <p
+          id="newsletterMessage"
+          style="margin-top: 10px; font-size: 0.95rem"
+        ></p>
         </div>
 
         <div class="clearfix"></div>
@@ -599,7 +623,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         integrity="sha384-Q1UQnLj04A6nmI09HeU3Xf2KqcpFgVmv4++C6bqITnVdFMF3E2aRm59pkl0nUtyr"
         crossorigin="anonymous"></script>
     <script src="js/lsb.min.js"></script>
+    <script>
+      function subscribeNewsletter(event) {
+        event.preventDefault(); // prevent form from refreshing
 
+        const emailInput = document.getElementById("newsletterEmail");
+        const message = document.getElementById("newsletterMessage");
+
+        // Basic success response
+        message.textContent = `✅ Thank you! ${emailInput.value} has been successfully subscribed.`;
+        message.style.color = "yellowgreen";
+
+        // Clear input
+        emailInput.value = "";
+        setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }
+    </script>
     <script>
         const menuToggle = document.getElementById("menu-toggle");
         const navLinks = document.getElementById("nav-links");
@@ -694,9 +735,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 }
             }
         }
-    </script>
 
-    <script>
         document.addEventListener("DOMContentLoaded", function () {
             const serviceLinks = document.querySelectorAll(".services-link");
 
@@ -718,6 +757,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
+
+   
 
     <script>
         // Open modal
@@ -751,7 +792,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 {
                     category: "training",
                     categoryName: "Event Discussion",
-                    title: "A discussion on the Bellagio resolutions and final report",
+                    title: "A discussion on the Bellagio resolutions.",
                     location: "Stanley Haven hotel, Murang'a",
                     date: "9 September 2025",
                     time: "8:00 AM - 5:00 PM",
@@ -861,7 +902,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         }" class="event-image">
 
                     <div style="padding: 30px;">
-                        <h3 class="event-title">${event.title}</h3>
+                        <h3 class="event-title" style="font-size: 24px;" >${event.title}</h3>
                     <div class="event-meta">
                             
                     <div class="meta">

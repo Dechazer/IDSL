@@ -40,9 +40,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <link rel="icon" type="image/png" href="images/LOGO.jpeg" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
- <style>
+    <style>
       * {
         margin: 0; /*helps keeping the testimonials intact*/
         padding: 0;
@@ -50,17 +50,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         scroll-behavior: smooth;
       }
 
-      /* Testimonials Section */
+      body {
+        padding-top: 120px; /* total height of header + navbar */
+      }
+      
 
       .navbar {
+        position: fixed;
+        top: 50px; /* adjust based on header height */
+        left: 0;
+        width: 100%;
         background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
         padding: 1rem 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        position: relative;
         height: 70px;
+        z-index: 1000;
       }
 
       .logo {
@@ -98,6 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(10px);
         transform: translateY(-2px);
+        color: #13a538;
       }
 
       /* Services dropdown styles */
@@ -162,8 +170,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       }
 
       .dropdown-menu a:hover {
-        
-        
         transform: translateX(5px);
       }
 
@@ -189,7 +195,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         border: none;
         color: black;
         cursor: pointer;
-        
       }
 
       /* Responsive design */
@@ -201,7 +206,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           gap: 0.5rem;
           height: auto; /* allow height to adjust based on content */
           padding: 1rem;
-          
         }
 
         .menu-toggle {
@@ -220,7 +224,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           border-radius: 12px;
           align-items: flex-start; /* align nav links left */
           text-align: left;
-          
         }
         #nav-links a {
           width: 100%; /* make links full width */
@@ -228,13 +231,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
         #nav-links.active {
           display: flex; /* show menu when toggled */
-          
         }
 
         .navbar ul {
           flex-wrap: nowrap;
           justify-content: flex-start;
-          
         }
 
         .dropdown-menu {
@@ -355,7 +356,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
       }
     </style>
-
   </head>
 
   <body>
@@ -385,10 +385,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="header_right">
           <div class="w3ls-social-icons">
             <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-            <a class="twitter" href="https://twitter.com/idslinstitute"><i class="fa fa-twitter"></i></a>
-            <a class="instagram" href="https://twitter.com/idsl.institute"><i class="fa fa-instagram"></i></a>
-            <a class="linkedin" href="https://twitter.com/idslinstitute"><i class="fa fa-linkedin"></i></a>
-            <a class="tumblr" href="https://twitter.com/idslinstitute"><i class="fa fa-tumblr"></i></a>
+            <a class="twitter" href="https://twitter.com/idslinstitute"
+              ><i class="fa fa-twitter"></i
+            ></a>
+            <a class="instagram" href="https://twitter.com/idsl.institute"
+              ><i class="fa fa-instagram"></i
+            ></a>
+            <a class="linkedin" href="https://twitter.com/idslinstitute"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+            <a class="tumblr" href="https://twitter.com/idslinstitute"
+              ><i class="fa fa-tumblr"></i
+            ></a>
           </div>
         </div>
         <div class="clearfix"></div>
@@ -400,135 +408,253 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="bnls">
       <!--banner-w3ls(makes the scroll below section disappear changed to bnls)-->
       <div class="container">
-        
-    <nav class="navbar">
-      <h1>
-                <a href="home.html">
-                  <img
-                    src="images/logo1.jpeg"
-                    alt="IDSL Logo"
-                    style="height: 50px"
-                  />
-                </a>
-                
-              </h1>
-      <!-- <a href="#" class="logo">QuickHealth</a> -->
+        <nav class="navbar">
+          <h1>
+            <a href="index.html">
+              <img
+                src="images/logo1.jpeg"
+                alt="IDSL Logo"
+                style="height: 50px"
+              />
+            </a>
+          </h1>
+          <!-- <a href="#" class="logo">QuickHealth</a> -->
 
-      <!-- Hamburger menu button -->
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+          <!-- Hamburger menu button -->
+          <button class="menu-toggle" id="menu-toggle">☰</button>
 
-      <ul id="nav-links">
-        <li><a href="home.html">Home</a></li>
-        
-        <li class="services-dropdown">
-          <a href="#" class="services-link">
-            About Us
-            <span class="dropdown-icon">▼</span>
-          </a>
-          <div class="dropdown-menu">
-            <a href="about2.html" data-service="general">Our Team</a>
-            <a href="purpose.html" data-service="specialist">Our Purpose</a>
-            
-          </div>
-        </li>
+          <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
 
-        <li class="services-dropdown">
-          <a href="#" class="services-link">
-            What We Do
-            <span class="dropdown-icon">▼</span>
-          </a>
-          <div class="dropdown-menu">
-            <a href="programs.html" data-service="general">Our Programs</a>
-            <a href="impact.html" data-service="specialist">Our Impact</a>
-            
-          </div>
-        </li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="events.html">News & Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html">Donate</a></li>
-      </ul>
-    </nav>
+            <li class="services-dropdown">
+              <a href="#" class="services-link">
+                About Us
+                <span class="dropdown-icon">▼</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="team.html" data-service="general">Our Team</a>
+                <a href="purpose.html" data-service="specialist">Our Purpose</a>
+              </div>
+            </li>
+
+            <li class="services-dropdown">
+              <a href="#" class="services-link">
+                What We Do
+                <span class="dropdown-icon">▼</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="programs.html" data-service="general">Our Programs</a>
+                <a href="impact.html" data-service="specialist">Our Impact</a>
+              </div>
+            </li>
+            <li><a href="events.html">News & Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
         <div class="clearfix"></div>
-        
       </div>
     </div>
 
-    <section class="contact-hero">
-      <div class="overlay">
-        <h3>Get in touch with us</h3>
-        <h1> <span><a href="index.html">Home</a> \ </span>Our Team</h1>
-      </div>
-    </section>
+    <!-- //banner -->
+    <!-- bootstrap-pop-up -->
+
     <!-- //bootstrap-pop-up -->
-    <div class="about-container" id="about">
-      <div class="main-header">
+    <section class="purpose-hero"></section>
+    <!-- Our Program Section -->
+    <section class="purpose-section" id="purpose">
+      <div class="container">
         <div class="purpose-header">
-          <h2 class="purpose-title">Meet Our Team</h2>
+          <h2 class="purpose-title">Why we do it</h2>
+          <p class="purpose-subtitle">
+            Why We Dedicate Our Lives to This Mission
+          </p>
           <p class="purpose-intro">
-            Our leadership team is dedicated to guiding IDSL’s mission of building sustainable livelihoods. 
-        Here are the people driving our vision forward.
+            In a world facing unprecedented challenges from climate change, food
+            insecurity, and social inequality, we stand as guardians of hope.
+            Our purpose is rooted in the belief that every community deserves
+            the opportunity to thrive sustainably while protecting the
+            environment for future generations.
           </p>
         </div>
-        
-      </div>
 
-      <div class="team-section">
-    
-    <!-- Team Member 1 -->
-    <div class="team-member1">
-      <img src="images/chair.jpg" alt="Chairperson">
-      <div class="team-info1">
-        <h4>Daniel Ndiang’ui Gitahi</h4>
-        <span>Chairperson</span>
-        <p>
-          Daniel provides strategic leadership and ensures that IDSL’s objectives align with its mission of sustainable development. 
-          He oversees governance, strengthens partnerships, and guides the organization’s long-term vision.
-        </p>
-      </div>
-    </div>
+        <div class="purpose-items">
+          <div class="purpose-item">
+            <div class="purpose-image-container">
+              <img src="images/up1.jpeg" alt="Fighting Hunger and Poverty" />
+            </div>
+            <div class="purpose-content-container">
+              <h3 class="purpose-item-title">Fighting Hunger & Poverty</h3>
+              <p class="purpose-item-subtitle">
+                "Because no one should go to bed hungry"
+              </p>
+              <p class="purpose-description">
+                We exist because millions of people across Kenya and beyond
+                still struggle with basic food security. Climate change has
+                intensified droughts, floods, and unpredictable weather patterns
+                that destroy crops and livestock, pushing vulnerable communities
+                deeper into poverty. Our purpose is to break this cycle through
+                sustainable agricultural practices, emergency food aid, and
+                long-term capacity building programs.
+              </p>
+              <ul class="purpose-highlights">
+                <li>
+                  Over 2.8 million Kenyans face acute food insecurity annually
+                </li>
+                <li>
+                  Climate change reduces crop yields by up to 30% in affected
+                  areas
+                </li>
+                <li>
+                  Rural communities lack access to modern farming techniques
+                </li>
+                <li>
+                  Women and children are disproportionately affected by hunger
+                </li>
+              </ul>
+              <div class="purpose-stats">
+                <!-- <div class="stat-item">
+                                <span class="stat-number">50K+</span>
+                                <span class="stat-label">Families Fed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Communities Served</span>
+                            </div> -->
+              </div>
+              <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+          </div>
 
-    <!-- Team Member 2 -->
-    <div class="team-member1">
-      <img src="images/peter.jpg" alt="Executive Board Member">
-      <div class="team-info1">
-        <h4>Peter Kuria</h4>
-        <span>Executive Board Member</span>
-        <p>
-          Peter plays a vital role in policy development and resource mobilization. 
-          He works closely with stakeholders to ensure that IDSL’s programs remain impactful and community-driven.
-        </p>
-      </div>
-    </div>
+          <div class="purpose-item">
+            <div class="purpose-image-container">
+              <img src="images/up.jpeg" alt="Environmental Conservation" />
+            </div>
+            <div class="purpose-content-container">
+              <h3 class="purpose-item-title">Protecting Our Nation</h3>
+              <p class="purpose-item-subtitle">
+                "Because safe nation is safe home!"
+              </p>
+              <p class="purpose-description">
+                Our environment is under unprecedented threat. Deforestation,
+                soil degradation, water pollution, and loss of biodiversity are
+                reaching critical levels. We exist to reverse these trends
+                through community-based conservation, reforestation programs,
+                and promoting sustainable land use practices. Our purpose is to
+                ensure that future generations inherit a thriving, healthy
+                planet where humans and nature coexist harmoniously.
+              </p>
+              <ul class="purpose-highlights">
+                <li>Kenya loses 12,000 hectares of forest annually</li>
+                <li>Soil erosion affects 75% of agricultural land</li>
+                <li>Water towers are critically degraded</li>
+                <li>Indigenous species face extinction threats</li>
+              </ul>
+              <div class="purpose-stats">
+                <!-- <div class="stat-item">
+                                <span class="stat-number">100K+</span>
+                                <span class="stat-label">Trees Planted</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5,000</span>
+                                <span class="stat-label">Hectares Restored</span>
+                            </div> -->
+              </div>
+              <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+          </div>
 
-    <!-- Team Member 3 -->
-    <div class="team-member1">
-      <img src="images/evans.jpg" alt="Secretary">
-      <div class="team-info1">
-        <h4>Evans Macharia</h4>
-        <span>Secretary</span>
-        <p>
-          Evans is responsible for organizational communication and documentation. 
-          He ensures transparency, manages records, and facilitates effective coordination among board members.
-        </p>
-      </div>
-    </div>
+          <div class="purpose-item">
+            <div class="purpose-image-container">
+              <img src="images/img11.jpeg" alt="Community Empowerment" />
+            </div>
+            <div class="purpose-content-container">
+              <h3 class="purpose-item-title">Empowering Communities</h3>
+              <p class="purpose-item-subtitle">
+                "Because unity creates unstoppable change"
+              </p>
+              <p class="purpose-description">
+                Strong, resilient communities are the foundation of sustainable
+                development. We exist because many communities lack the
+                resources, knowledge, and opportunities needed to lift
+                themselves out of poverty. Our purpose is to empower communities
+                through skills training, gender equality initiatives, and
+                conflict resolution programs. We believe that when communities
+                are empowered, they become agents of their own transformation.
+              </p>
+              <ul class="purpose-highlights">
+                <li>Gender inequality limits women's economic participation</li>
+                <li>Resource-based conflicts threaten community cohesion</li>
+              </ul>
+              <div class="purpose-stats">
+                <!-- <div class="stat-item">
+                                <span class="stat-number">15K+</span>
+                                <span class="stat-label">People Trained</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">85%</span>
+                                <span class="stat-label">Success Rate</span>
+                            </div> -->
+              </div>
+              <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+          </div>
 
-    <!-- Team Member 4 -->
-    <div class="team-member1">
-      <img src="images/leah.jpg" alt="Executive Board Member">
-      <div class="team-info1">
-        <h4>Leah Wanja Mariene</h4>
-        <span>Executive Board Member</span>
-        <p>
-          Leah advocates for gender equality and inclusive development. 
-          She supports program design and implementation with a strong focus on empowering marginalized communities.
-        </p>
+          <div class="purpose-item">
+            <div class="purpose-image-container">
+              <img src="images/news.jpeg" alt="Policy and Advocacy" />
+            </div>
+            <div class="purpose-content-container">
+              <h3 class="purpose-item-title">Advocating for Change</h3>
+              <p class="purpose-item-subtitle">
+                "Because systemic problems need systemic solutions"
+              </p>
+              <p class="purpose-description">
+                Individual and community efforts, while crucial, are not enough
+                to address the scale of challenges we face. We exist to advocate
+                for policy changes that support sustainable development,
+                environmental protection, and social justice. Our purpose is to
+                ensure that government policies and international frameworks
+                work for the people and the planet. We bridge the gap between
+                grassroots experiences and policy-making processes.
+              </p>
+              <ul class="purpose-highlights">
+                <li>Current policies often favor unsustainable practices</li>
+                <li>Smallholder farmers lack policy representation</li>
+                <li>Environmental laws need stronger enforcement</li>
+                <li>Indigenous rights require legal protection</li>
+              </ul>
+              <div class="purpose-stats">
+                <!-- <div class="stat-item">
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Policy Changes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">500K+</span>
+                                <span class="stat-label">Lives Impacted</span>
+                            </div> -->
+              </div>
+              <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-quote">
+          <div class="quote-content">
+            <p class="quote-text">
+              "We exist because the future of our planet and our people depends
+              on the choices we make today. Every tree we plant, every family we
+              feed, every community we empower, and every policy we advocate for
+              is a step towards a more sustainable, equitable, and prosperous
+              future for all."
+            </p>
+            <p class="quote-author">— Our Founding Vision</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-    </div>
-    
+    </section>
+
     <!-- footer -->
     <div class="footer">
       <div class="col-md-3 footer-left-agileits">
@@ -537,7 +663,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <ul>
           <li>
             <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-            Nakuru city off Nakuru-Subukia Road,Grand Canyon Building. Seconf Floor.
+            Nakuru city off Nakuru-Subukia Road,Grand Canyon Building. Second
+            Floor.
           </li>
           <li>
             <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span
@@ -555,7 +682,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               class="glyphicon glyphicon-earphone"
               aria-hidden="true"
             ></span>
-            0707613302      
+            0707613302
           </li>
         </ul>
       </div>
@@ -564,7 +691,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <ul>
           <li>
             <a
-              href="mailto:info@example.com"
+              href="index.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -574,7 +701,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </li>
           <li>
             <a
-              href="mailto:info@example.com"
+              href="index.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -585,7 +712,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
           <li>
             <a
-              href="mailto:info@example.com"
+              href="contact.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -596,7 +723,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
           <li>
             <a
-              href="mailto:info@example.com"
+              href="donate.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -606,7 +733,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </li>
           <li>
             <a
-              href="mailto:info@example.com"
+              href="impact.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -616,7 +743,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </li>
           <li>
             <a
-              href="mailto:info@example.com"
+              href="events.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -631,17 +758,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <p>Visit us anytime connect with us anytime.</p>
         <ul class="social-icons">
           <li><a href="#" class="icon icon-border facebook"></a></li>
-          <li><a href="https://twitter.com/idslinstitute" class="icon icon-border twitter"></a></li>
-          <li><a href="https://instagram.com/idsl.institute" class="icon icon-border instagram"></a></li>
+          <li>
+            <a
+              href="https://twitter.com/idslinstitute"
+              class="icon icon-border twitter"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/idsl.institute"
+              class="icon icon-border instagram"
+            ></a>
+          </li>
           <li><a href="#" class="icon icon-border pinterest"></a></li>
         </ul>
       </div>
       <div class="col-md-3 footer-left-w3-agileits">
         <h3 style="font-family: 'Lora', serif">Newsletter</h3>
         <p>Subscribe to our newsletter for daily updates</p>
-        
 
-        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)" style="flex-direction: row;">
           <input
             type="email"
             class="newsletter-input"
@@ -677,32 +813,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Q1UQnLj04A6nmI09HeU3Xf2KqcpFgVmv4++C6bqITnVdFMF3E2aRm59pkl0nUtyr"
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"
+    ></script>
     <script src="js/lsb.min.js"></script>
 
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const serviceLinks = document.querySelectorAll(".services-link");
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceLinks = document.querySelectorAll(".services-link");
 
-  serviceLinks.forEach(link => {
-    const dropdownMenu = link.nextElementSibling;
+        serviceLinks.forEach((link) => {
+          const dropdownMenu = link.nextElementSibling;
 
-    // Toggle menu on click
-    link.addEventListener("click", function (e) {
-      e.preventDefault(); // prevent link jump
-      dropdownMenu.classList.toggle("show");
-    });
+          // Toggle menu on click
+          link.addEventListener("click", function (e) {
+            e.preventDefault(); // prevent link jump
+            dropdownMenu.classList.toggle("show");
+          });
 
-    // Close if clicking outside
-    document.addEventListener("click", function (e) {
-      if (!link.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.remove("show");
-      }
-    });
-  });
-});
-</script>
+          // Close if clicking outside
+          document.addEventListener("click", function (e) {
+            if (!link.contains(e.target) && !dropdownMenu.contains(e.target)) {
+              dropdownMenu.classList.remove("show");
+            }
+          });
+        });
+      });
+    </script>
 
     <script>
       function subscribeNewsletter(event) {

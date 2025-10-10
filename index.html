@@ -40,9 +40,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <link rel="icon" type="image/png" href="images/LOGO.jpeg" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
- <style>
+    <style>
       * {
         margin: 0; /*helps keeping the testimonials intact*/
         padding: 0;
@@ -50,17 +50,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         scroll-behavior: smooth;
       }
 
-      /* Testimonials Section */
+      body {
+        padding-top: 120px; /* total height of header + navbar */
+      }
+      
 
       .navbar {
+        position: fixed;
+        top: 50px; /* adjust based on header height */
+        left: 0;
+        width: 100%;
         background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
         padding: 1rem 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        position: relative;
         height: 70px;
+        z-index: 1000;
       }
 
       .logo {
@@ -98,6 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(10px);
         transform: translateY(-2px);
+        color: #13a538;
       }
 
       /* Services dropdown styles */
@@ -162,9 +170,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       }
 
       .dropdown-menu a:hover {
-        
-        
-        transform: translateX(5px);
+        transform: translateX(2px);
       }
 
       .dropdown-menu::before {
@@ -187,9 +193,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         font-size: 2rem;
         background: none;
         border: none;
-        color: white;
+        color: black;
         cursor: pointer;
-        
       }
 
       /* Responsive design */
@@ -201,7 +206,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           gap: 0.5rem;
           height: auto; /* allow height to adjust based on content */
           padding: 1rem;
-          
         }
 
         .menu-toggle {
@@ -220,21 +224,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           border-radius: 12px;
           align-items: flex-start; /* align nav links left */
           text-align: left;
-          
         }
         #nav-links a {
           width: 100%; /* make links full width */
-          color: #008080;
+          color: black;
         }
         #nav-links.active {
           display: flex; /* show menu when toggled */
-          
         }
 
         .navbar ul {
           flex-wrap: nowrap;
           justify-content: flex-start;
-          
         }
 
         .dropdown-menu {
@@ -252,6 +253,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         .services-dropdown:hover .dropdown-menu {
           display: block;
+          
         }
       }
 
@@ -354,8 +356,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           opacity: 0;
         }
       }
-    </style>
 
+      
+    </style>
   </head>
 
   <body>
@@ -385,10 +388,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="header_right">
           <div class="w3ls-social-icons">
             <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-            <a class="twitter" href="https://twitter.com/idslinstitute"><i class="fa fa-twitter"></i></a>
-            <a class="instagram" href="https://twitter.com/idsl.institute"><i class="fa fa-instagram"></i></a>
-            <a class="linkedin" href="https://twitter.com/idslinstitute"><i class="fa fa-linkedin"></i></a>
-            <a class="tumblr" href="https://twitter.com/idslinstitute"><i class="fa fa-tumblr"></i></a>
+            <a class="twitter" href="https://twitter.com/idslinstitute"
+              ><i class="fa fa-twitter"></i
+            ></a>
+            <a class="instagram" href="https://twitter.com/idsl.institute"
+              ><i class="fa fa-instagram"></i
+            ></a>
+            <a class="linkedin" href="https://twitter.com/idslinstitute"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+            <a class="tumblr" href="https://twitter.com/idslinstitute"
+              ><i class="fa fa-tumblr"></i
+            ></a>
           </div>
         </div>
         <div class="clearfix"></div>
@@ -400,54 +411,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="bnls">
       <!--banner-w3ls(makes the scroll below section disappear changed to bnls)-->
       <div class="container">
-        
-    <nav class="navbar">
-      <h1>
-                <a href="index.html">
-                  <img
-                    src="images/logo1.jpeg"
-                    alt="IDSL Logo"
-                    style="height: 50px"
-                  />
-                </a>
-                
-              </h1>
-      <!-- <a href="#" class="logo">QuickHealth</a> -->
+        <nav class="navbar">
+          <h1>
+            <a href="index.html">
+              <img
+                src="images/logo1.jpeg"
+                alt="IDSL Logo"
+                style="height: 50px"
+              />
+            </a>
+          </h1>
+          <!-- <a href="#" class="logo">QuickHealth</a> -->
 
-      <!-- Hamburger menu button -->
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+          <!-- Hamburger menu button -->
+          <button class="menu-toggle" id="menu-toggle">☰</button>
 
-      <ul id="nav-links">
-        <li><a href="index.php">Home</a></li>
-        
-        <li class="services-dropdown">
-          <a href="#" class="services-link">
-            About Us
-            <span class="dropdown-icon">▼</span>
-          </a>
-          <div class="dropdown-menu">
-            <a href="#fertility-care" data-service="general">Our Team</a>
-            <a href="#contraception-services" data-service="specialist">Our Partnership</a>
-            
-          </div>
-        </li>
+          <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
 
-        <li class="services-dropdown">
-          <a href="#" class="services-link">
-            What We Do
-            <span class="dropdown-icon">▼</span>
-          </a>
-          <div class="dropdown-menu">
-            <a href="#fertility-care" data-service="general">Our Programs</a>
-            <a href="#contraception-services" data-service="specialist">Our Impact</a>
-            
-          </div>
-        </li>
-        <li><a href="appointments.html">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="signup.html">Donate</a></li>
-      </ul>
-    </nav>
+            <li class="services-dropdown">
+              <a href="#" class="services-link">
+                About Us
+                <span class="dropdown-icon">▼</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="team.html" data-service="general">Our Team</a>
+                <a href="purpose.html" data-service="specialist">Our Purpose</a>
+              </div>
+            </li>
+
+            <li class="services-dropdown">
+              <a href="#" class="services-link">
+                What We Do
+                <span class="dropdown-icon">▼</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="programs.html" data-service="general">Our Programs</a>
+                <a href="impact.html" data-service="specialist">Our Impact</a>
+              </div>
+            </li>
+
+            <li><a href="events.html">News & Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
         <div class="clearfix"></div>
         <div class="scrolling-text-container">
           <span class="label">Our Core Values:</span>
@@ -471,7 +480,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <p><span>• </span> Human rights</p>
                 <p><span>• </span> Non discrimination</p>
                 <p><span>• </span> Good governance</p>
-                <p><span>• </span> Non discrimination</p>
               </div>
             </div>
           </div>
@@ -507,10 +515,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <p class="subtitle">
           Lets ensure sustainability is attained at all cost!
         </p>
-        <p class="description">Through unity we can make it happen.</p>
+
         <div class="cta-buttons">
           <a href="contact.html" class="btn btn-secondary">Reach Us</a>
-          <a href="#donate" class="btn btn-primary">Donate Now</a>
+          <a href="donate.html" class="btn btn-primary">Donate Now</a>
         </div>
       </div>
 
@@ -526,52 +534,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </section>
     <!-- //bootstrap-pop-up -->
     <div class="about-container" id="about">
-      <div class="main-header">
+      <div class="">
         <div class="title-agileits">
-          <h3 style="color: black; font-family: 'Lora', serif">About Us</h3>
+          <h3 style="color: black; font-family: 'Lora', serif; text-transform: none;">About Idsl</h3>
         </div>
       </div>
 
       <div class="stn-grid">
-        <div class="stn-card who-we-are">
-          <h2 class="stn-title">Who We Are</h2>
-
-          <div class="stn-content">
-            <p>
-              The Institute for Development and Sustainable Livelihoods (IDSL)
-              is a national Non-Governmental Organization registered in 2024
-              pursuant to provisions of the Non Governmental Organizations
-              Co-Ordination Act of 1990 (CAP 19).
-            </p>
-            <p>
-              Our headquarters are located in Nakuru city off Nakuru-Subukia
-              Road at Bahati, second floor of the Grand Canyon Building, with a
-              provisional satellite office in Nairobi at Cianda House.
-            </p>
-
-            <p>
-              We are a forward-thinking organization dedicated to sustainable
-              agriculture, climate resilience, and equitable food systems in
-              Kenya, working with rural communities to promote agroecology,
-              green innovations, and policy advocacy.
-            </p>
-
-            <p>
-              <strong>Our motto:</strong> Engaging local communities for
-              sustainability and resilience in green development
-            </p>
-          </div>
+        <div class="stn-content">
+          <p>
+            The Institute for Development and Sustainable Livelihoods (IDSL) is
+            a national Non-Governmental Organization registered in 2024 pursuant
+            to provisions of the Non-Governmental Organizations Co-Ordination
+            Act of 1990 (CAP 19).
+          </p>
+          <p>
+            Our headquarters are located in Nakuru city off Nakuru-Subukia Road
+            at Bahati, second floor of the Grand Canyon Building, with a
+            provisional satellite office in Nairobi at Cianda House.
+          </p>
+          <p>
+            We are a forward-thinking organization dedicated to sustainable
+            agriculture, climate resilience, and equitable food systems in
+            Kenya, working with rural communities to promote agroecology, green
+            innovations, and policy advocacy.
+          </p>
+          <p>
+            <strong>Our motto:</strong> Engaging local communities for
+            sustainability and resilience in green development.
+          </p>
+        </div>
+        <div class="stn-image">
+          <img
+            src="images/img7.jpeg"
+            alt="Sustainable Agriculture"
+          />
         </div>
       </div>
+
+      
     </div>
     <!-- about -->
+
     <section class="main-section-about">
       <div class="container-about">
         <div class="vision-mission-container">
+          <!-- Vision Card -->
           <div class="content-card-about">
-            <div class="card-icon-about">
-              <i class="bi bi-eye"></i>
-            </div>
+            <!-- Added Vision Image -->
+            <!-- <div class="card-image-about">
+              <img src="images/news1.jpeg" alt="Our Vision Image" />
+            </div> -->
+
             <h3 class="card-title-about">Our Vision</h3>
             <p class="card-content-about">
               A thriving, food-secure society where communities live
@@ -579,12 +593,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               fundamental rights to safe, nutritious food and a healthy
               environment.
             </p>
+
+            <div class="stats-row1">
+                        <div class="stat-item1">
+                            <span class="stat-number1">4</span>
+                            <span class="stat-label1">Counties</span>
+                        </div>
+                        <div class="stat-item1">
+                            <span class="stat-number1">50K+</span>
+                            <span class="stat-label1">Lives Impacted</span>
+                        </div>
+                        <div class="stat-item1">
+                            <span class="stat-number1">100%</span>
+                            <span class="stat-label1">Commitment</span>
+                        </div>
+                    </div>
           </div>
 
+          <!-- Mission Card -->
           <div class="content-card-about">
-            <div class="card-icon-about">
-              <i class="bi bi-lightning-charge"></i>
-            </div>
+            <!-- Added Mission Image -->
+            <!-- <div class="card-image-about">
+              <img src="images/news2.jpeg" alt="Our Mission Image" />
+            </div> -->
+
             <h3 class="card-title-about">Our Mission</h3>
             <p class="card-content-about">To transform food systems through:</p>
             <ul class="mission-items-about">
@@ -607,38 +639,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ul>
           </div>
         </div>
-
-        <!-- <div class="values-section-about">
-                <div class="values-header-about">
-                    <h3 class="values-title-about">Our Core </h3>
-                    <p class="values-subtitle-about">
-                        Our organization core values are the guiding principles that shape our culture, influence decision making and define our identity
-                    </p>
-                </div>
-
-                <div class="values-grid-about">
-                    <div class="value-item-about">
-                        <div class="value-icon-about"></div>
-                        <h4 class="value-title-about">Transparency</h4>
-                    </div>
-                    <div class="value-item-about">
-                        <div class="value-icon-about"></div>
-                        <h4 class="value-title-about">Accountability</h4>
-                    </div>
-                    <div class="value-item-about">
-                        <div class="value-icon-about"></div>
-                        <h4 class="value-title-about">Accountability</h4>
-                    </div>
-                    <div class="value-item-about">
-                        <div class="value-icon-about"></div>
-                        <h4 class="value-title-about">Accountability</h4>
-                    </div>
-                </div>
-            </div> -->
       </div>
     </section>
 
     <div class="about-container">
+      <div class="title-agileits">
+          <h3 style="color: black; font-family: 'Lora', serif; text-transform: none;">Why We Do It</h3>
+        </div>
       <section class="volunter-section">
         <!-- Left: Image Grid -->
         <div class="image-grid">
@@ -649,8 +656,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
 
         <!-- Right: Content -->
-        <div class="content">
-          <h3>Why We Do It!</h3>
+        <div class="content" style="margin-top: 2px;">
+          
 
           <p>
             Kenya faces climate shocks, food insecurity, and social
@@ -671,42 +678,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <li>Good governance .</li>
             <li>Sustainable development.</li>
           </ul>
-          <a href="#" class="btn">Join With Us</a>
+          <a href="purpose.html" class="learn-more-btn">Learn More</a>
         </div>
       </section>
-      <!-- <div class="stn-grid1">
-        <div class="stn-card1 who-we-are">
-          <h2 class="stn-title">Why We Do It</h2>
-
-          <div class="stn-content1">
-            <p>
-              Kenya faces climate shocks, food insecurity, and social
-              inequalities, particularly in marginalized regions. By integrating
-              traditional knowledge with modern innovations, we help communities
-              build resilience, protect natural resources, and secure their
-              right to food (as enshrined in Kenya’s Constitution, Article 43).
-            </p>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- <div class="motto-section">
-            <div class="motto-content">
-                <h2 class="motto-title">Our Motto</h2>
-                <p class="motto-text">"Engaging local communities for sustainability and resilience in green development"</p>
-            </div>
-        </div> -->
+      
     </div>
 
     <!-- Our Program Section -->
     <section class="section program-section" id="programs">
-      <div class="container">
+      <div class="container" style="padding: 40px 0; z-index: 0;">
         <div class="title-agileits">
           <h3
             style="
               color: black;
               font-family: 'Lora', serif;
-              margin-bottom: 30px;
+              margin-bottom: 30px; text-transform: none;
             "
           >
             Our Programs
@@ -731,117 +717,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               nation through improved, sustainable farming.
             </p>
             <p class="section-subtitle">
-              Walk with our and discover how we make it happen!
+              Walk with us and discover how we make it happen!
             </p>
+            <a href="programs.html" class="learn-more-btn">Learn More</a>
           </div>
         </div>
 
-        <div class="programs-grid">
-          <div class="program-card">
-            <div class="program-number">i</div>
-            <h3 class="program-title">
-              Sustainable Agriculture & Food Security
-            </h3>
-            <p class="program-goal">
-              Goal: Empower farmers with resilient, eco-friendly practices.
-            </p>
-            <ul class="program-activities">
-              <li>
-                Promote agroecology (crop diversity, organic inputs, waste
-                recycling)
-              </li>
-              <li>
-                Train farmers in soil erosion control & water conservation
-              </li>
-              <li>Strengthen seed sovereignty & local food production</li>
-              <li>Reduce food loss & post-harvest waste</li>
-            </ul>
-          </div>
-
-          <div class="program-card">
-            <div class="program-number">ii</div>
-            <h3 class="program-title">Climate Action & Green Innovations</h3>
-            <p class="program-goal">
-              Goal: Combat climate change through adaptation & mitigation.
-            </p>
-            <ul class="program-activities">
-              <li>Advocate for renewable energy (solar, biogas)</li>
-              <li>
-                Implement carbon sequestration (agroforestry, no-till farming)
-              </li>
-              <li>Support climate-smart livestock & fisheries</li>
-              <li>Train communities in disaster risk reduction</li>
-            </ul>
-          </div>
-
-          <div class="program-card">
-            <div class="program-number">iii</div>
-            <h3 class="program-title">Humanitarian & Social Development</h3>
-            <p class="program-goal">
-              Goal: Improve livelihoods in crisis-affected areas.
-            </p>
-            <ul class="program-activities">
-              <li>Emergency food & water aid in droughts/floods</li>
-              <li>WASH programs (clean water access, sanitation)</li>
-              <li>Gender equality & anti-GBV initiatives</li>
-              <li>Peacebuilding & conflict resolution in pastoral regions</li>
-            </ul>
-          </div>
-
-          <div class="program-card">
-            <div class="program-number">iv</div>
-            <h3 class="program-title">
-              Food Systems Transformation & Advocacy
-            </h3>
-            <p class="program-goal">
-              Goal: Influence policies for a fairer, healthier food future.
-            </p>
-            <ul class="program-activities">
-              <li>
-                Promote indigenous crops & traditional diets for better
-                nutrition
-              </li>
-              <li>Campaign against harmful agrochemicals & GMOs</li>
-              <li>Lobby for pro-farmer policies & land rights</li>
-              <li>Document & protect indigenous knowledge (ITK)</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="approach-section">
-          <h4 class="approach-title">Our Approach</h4>
-          <div class="approach-items">
-            <div class="approach-item">
-              <h4>Community-led</h4>
-              <p>
-                Farmers, women, and youth drive our programs, ensuring local
-                ownership and sustainable solutions.
-              </p>
-            </div>
-            <div class="approach-item">
-              <h4>Evidence-based</h4>
-              <p>
-                Monitoring & evaluation ensure measurable results and continuous
-                improvement in our initiatives.
-              </p>
-            </div>
-            <div class="approach-item">
-              <h4>Collaborative</h4>
-              <p>
-                Partnering with governments, NGOs, and research institutions to
-                maximize our collective impact.
-              </p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
 
     <!-- Our Impact Section -->
-    <section class="section impact-section" id="impact">
-      <div class="container">
+    <section class="section impact-section" id="impact"  style="padding: 40px 0;">
+      <div class="container" style="z-index: 0;">
         <div class="title-agileits">
-          <h3 style="color: black; font-family: 'Lora', serif">Our Impact</h3>
+          <h3 style="color: black; font-family: 'Lora', serif; text-transform: none; ">Our Impact</h3>
         </div>
         <div class="section-content">
           <div class="section-image">
@@ -879,6 +769,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </p>
               </div>
             </div>
+            <a
+              href="impact.html"
+              class="learn-more-btn"
+              style="margin-top: 30px"
+              >Learn More</a
+            >
           </div>
         </div>
 
@@ -892,9 +788,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //about -->
     <!--team-->
     <div class="team-section">
-      <div class="container">
+      <div class="container" style="z-index: 0;">
         <div class="title-agileits">
-          <h3 style="color: black; font-family: 'Lora', serif">
+          <h3 style="color: black; font-family: 'Lora', serif; text-transform: none;">
             Meet Our Team
           </h3>
           <p>
@@ -937,172 +833,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     <!--//team-->
 
-    <!-- Donate section -->
-    <div class="process-agileits" id="donate">
-      <div class="container">
-        <div class="title-agileits">
-          <h3
-            style="font-family: 'Lora', serif; margin-bottom: 60px"
-            class="w3l-agile"
-          >
-            Save The Nation From Hunger
-          </h3>
-        </div>
-
-        <div class="process_grids">
-          <div class="col-md-6 process_left">
-            <div class="port-2 effect-1">
-              <div class="image-box">
-                <img
-                  class="img-responsive"
-                  src="https://nrpa.org.za/wp-content/uploads/2023/06/donate.jpg"
-                  alt="Image-1"
-                />
-              </div>
-              <div class="text-desc">
-                <h4>Take Part..</h4>
-                <p>
-                  Be part of this awesome change. Lets maintain a thriving,
-                  food-secure society where communities live sustainably.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 process-one">
-            <h5>Donate Now to Support</h5>
-            <p>
-              Your donation helps us empower farmers, support vulnerable
-              communities, promote green innovations, and advocate for fair food
-              systems.
-            </p>
-            <button class="donate-btn" id="openModal">Donate Now</button>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-
-        <!-- Popup Donation Form -->
-        <div class="modal" id="donationModal">
-          <div class="modal-content">
-            <span class="close-btn" id="closeModal">&times;</span>
-            <h2 style="color: #13a538">Make a Donation</h2>
-            <form action="donate.php" method="POST" class="donation-form">
-              <label>Full Name:</label>
-              <input type="text" name="name" required />
-
-              <label>Email:</label>
-              <input type="email" name="email" required />
-
-              <label>Amount (KES or USD):</label>
-              <input type="number" name="amount" min="1" required />
-
-              <label>Choose Payment Method:</label>
-              <select name="method" required>
-                <option value="paypal">PayPal</option>
-                <option value="mpesa">M-Pesa</option>
-              </select>
-
-              <button type="submit" class="donate-btn">
-                Proceed to Donate
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- content -->
-    <!-- <div class="content-counter" id="donate">
-      <div class="container">
-        <div class="title-agileits">
-          <h3
-            class="w3l-agile"
-            style="color: white; font-family: 'Lora', serif"
-          >
-            Donate To Us
-          </h3>
-        </div>
-        <div class="content_grids">
-          <div class="col-md-3 capabil-grid text-center">
-            <i class="fa fa-apple" aria-hidden="true"></i>
-            <div
-              class="numscroller numscroller-big-bottom"
-              data-slno="1"
-              data-min="0"
-              data-max="5700"
-              data-delay=".5"
-              data-increment="1"
-            >
-              5700
-            </div>
-            <p>Food</p>
-          </div>
-          <div class="col-md-3 capabil-grid mar-top text-center">
-            <i class="fa fa-child" aria-hidden="true"></i>
-            <div
-              class="numscroller numscroller-big-bottom"
-              data-slno="1"
-              data-min="0"
-              data-max="1700"
-              data-delay=".5"
-              data-increment="1"
-            >
-              1700
-            </div>
-            <p>Cloths</p>
-          </div>
-          <div
-            class="col-md-3 capabil-grid mar-top wow fadeInDown animated animated text-center"
-          >
-            <i class="fa fa-eye" aria-hidden="true"></i>
-            <div
-              class="numscroller numscroller-big-bottom"
-              data-slno="1"
-              data-min="0"
-              data-max="9000"
-              data-delay=".5"
-              data-increment="1"
-            >
-              9000
-            </div>
-            <p>Eyes</p>
-          </div>
-          <div
-            class="col-md-3 capabil-grid wow fadeInUp animated animated text-center"
-          >
-            <i class="fa fa-money" aria-hidden="true"></i>
-            <div
-              class="numscroller numscroller-big-bottom"
-              data-slno="1"
-              data-min="0"
-              data-max="2500"
-              data-delay=".5"
-              data-increment="1"
-            >
-              2500
-            </div>
-            <p>Money</p>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- //content -->
-
-    <!-- //process -->
-
     <!-- news -->
-    <div class="news" id="news">
-      <div class="container">
+    <div class="news" id="events">
+      <div class="container" style="z-index: 0;">
         <div class="title-agileits">
-          <h3 style="font-family: 'Lora', serif">Recent Events</h3>
+          <h3 style="font-family: 'Lora', serif; text-transform: none;">Recent Events</h3>
         </div>
 
         <div class="slider-container">
           <!-- Left Button -->
-          <button class="nav-btn nav-left" onclick="scrollSlider(-1)">
+
+          <!-- <button class="nav-btn nav-left" onclick="scrollSlider(-1)">
             &#8592;
-          </button>
+          </button> -->
 
           <!-- Slider -->
           <div class="slider" id="slider">
@@ -1121,7 +864,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   their anchoring to regenerative and agroecological transitions
                   and sustainable financing
                 </p>
-                <button>Read More</button>
+                <a href="events.html" class="read-more">Read More →</a>
               </div>
             </div>
             <div class="card">
@@ -1138,65 +881,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   GHG Accounting tool validation, on how to make operations
                   smooth through sustainable accounting held in Muranga
                 </p>
-                <button>Read More</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/event1.jpg" alt="" />
-              <div class="card-content">
-                <h3>Event 1</h3>
-                <div class="meta">
-                  <i class="bi bi-calendar-event"></i> 9 September 2025
-                </div>
-                <div class="meta">
-                  <i class="bi bi-geo-alt"></i> Stanley Haven hotel, Murang'a
-                </div>
-                <p>
-                  A discussion on the Bellagio resolutions and final report on
-                  their anchoring to regenerative and agroecological transitions
-                  and sustainable financing
-                </p>
-                <button>Read More</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/event1.jpg" alt="" />
-              <div class="card-content">
-                <h3>Event 1</h3>
-                <div class="meta">
-                  <i class="bi bi-calendar-event"></i> 9 September 2025
-                </div>
-                <div class="meta">
-                  <i class="bi bi-geo-alt"></i> Stanley Haven hotel, Murang'a
-                </div>
-                <p>GHG tool validation in Muranga</p>
-                <button>Read More</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="images/news.jpeg" alt="" />
-              <div class="card-content">
-                <h3>Event 1</h3>
-                <div class="meta">
-                  <i class="bi bi-calendar-event"></i> 9 September 2025
-                </div>
-                <div class="meta">
-                  <i class="bi bi-geo-alt"></i> Stanley Haven hotel, Murang'a
-                </div>
-                <p>
-                  A discussion on the Bellagio resolutions and final report on
-                  their anchoring to regenerative and agroecological transitions
-                  and sustainable financing
-                </p>
-                <button>Read More</button>
+                <a href="events.html" class="read-more">Read More →</a>
               </div>
             </div>
           </div>
 
           <!-- Right Button -->
-          <button class="nav-btn nav-right" onclick="scrollSlider(1)">
+
+          <!-- <button class="nav-btn nav-right" onclick="scrollSlider(1)">
             &#8594;
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
@@ -1205,82 +899,81 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <!-- feed -->
     <div class="feeds-flicker-agile">
-  <div class="container">
-    <div class="title-agileits">
-      <h3 style="font-family: 'Lora', serif" class="w3l-agile">
-        People Says
-      </h3>
+      <div class="container" style="z-index: 0;">
+        <div class="title-agileits">
+          <h3 style="font-family: 'Lora', serif; text-transform: none; z-index: 0;" class="w3l-agile">
+            People Says
+          </h3>
+        </div>
+        <div class="flex-slider">
+          <ul id="flexiselDemo1">
+            <!-- Testimonial 1 -->
+            <li>
+              <div class="laptop">
+                <div class="col-md-4 team-left">
+                  <img class="img-responsive" src="images/t1.jpg" alt=" " />
+                </div>
+                <div class="col-md-8 team-right">
+                  <p>
+                    “IDSL has done empowement through, eco-friendly practices
+                    through agroecology, soil conservation, and water
+                    management. Our community is more food secure than ever.”
+                  </p>
+                  <h5>Federica – Farmer</h5>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </li>
+
+            <!-- Testimonial 2 -->
+            <li>
+              <div class="laptop">
+                <div class="col-md-4 team-left">
+                  <img class="img-responsive" src="images/t4.jpg" alt=" " />
+                </div>
+                <div class="col-md-8 team-right">
+                  <p>
+                    “Through IDSL’s climate action programs, we’ve adopted
+                    renewable energy and green innovations that reduce emissions
+                    and strengthen resilience to climate change.”
+                  </p>
+                  <h5>Thompson – Community Member</h5>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </li>
+
+            <!-- Testimonial 3 -->
+            <li>
+              <div class="laptop">
+                <div class="col-md-4 team-left">
+                  <img class="img-responsive" src="images/t3.jpg" alt=" " />
+                </div>
+                <div class="col-md-8 team-right">
+                  <p>
+                    “IDSL’s humanitarian support, especially in WASH and gender
+                    inclusion, has brought dignity and equality to our
+                    community.”
+                  </p>
+                  <h5>Leah –Farmer</h5>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="flex-slider">
-      <ul id="flexiselDemo1">
-
-        <!-- Testimonial 1 -->
-        <li>
-          <div class="laptop">
-            <div class="col-md-4 team-left">
-              <img class="img-responsive" src="images/t1.jpg" alt=" " />
-            </div>
-            <div class="col-md-8 team-right">
-              <p>
-                “IDSL has done empowement through, eco-friendly
-                practices through agroecology, soil conservation, and water
-                management. Our community is more food secure than ever.”
-              </p>
-              <h5>Federica – Beneficiary</h5>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </li>
-
-        <!-- Testimonial 2 -->
-        <li>
-          <div class="laptop">
-            <div class="col-md-4 team-left">
-              <img class="img-responsive" src="images/t4.jpg" alt=" " />
-            </div>
-            <div class="col-md-8 team-right">
-              <p>
-                “Through IDSL’s climate action programs, we’ve adopted
-                renewable energy and green innovations that reduce emissions
-                and strengthen resilience to climate change.”
-              </p>
-              <h5>Thompson – Community Member</h5>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </li>
-
-        <!-- Testimonial 3 -->
-        <li>
-          <div class="laptop">
-            <div class="col-md-4 team-left">
-              <img class="img-responsive" src="images/t3.jpg" alt=" " />
-            </div>
-            <div class="col-md-8 team-right">
-              <p>
-                “IDSL’s humanitarian support, especially in WASH and gender
-                inclusion, has brought dignity and equality to our community.”
-              </p>
-              <h5>Leah – Women’s Group Leader</h5>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-        </li>
-
-      </ul>
-    </div>
-  </div>
-</div>
 
     <!-- //feed -->
 
     <!---------BLOG SECTION-->
     <section class="blog-section" id="blog">
       <div class="blog-header">
-        <div class="container">
+        <div class="container" style="z-index: 0;">
           <div class="title-agileits">
             <h3
-              style="font-family: 'Lora', serif; color: black"
+              style="font-family: 'Lora', serif; color: black; text-transform: none; "
               class="w3l-agile"
             >
               Our Blog & Insights
@@ -1291,10 +984,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="blog-container">
           <!-- Blog Post -->
           <div class="blog-card">
-            <img
-              src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-              alt="Agriculture"
-            />
+            <img src="images/img8.jpeg" alt="Agriculture" />
             <div class="blog-content">
               <span class="tag">Sustainable Agriculture</span>
               <h3>Empowering Farmers with Agroecology</h3>
@@ -1302,7 +992,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 How IDSL trains rural communities in soil & water conservation,
                 seed sovereignty, and reducing food waste.
               </p>
-              <a href="#" class="read-more">Read More →</a>
+              <a href="blog.html" class="read-more">Read More →</a>
             </div>
           </div>
 
@@ -1319,16 +1009,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 Exploring renewable energy, carbon credits, and disaster risk
                 reduction in Kenya, to ensure a better nation.
               </p>
-              <a href="#" class="read-more">Read More →</a>
+              <a href="blog.html" class="read-more">Read More →</a>
             </div>
           </div>
 
           <!-- Blog Post -->
           <div class="blog-card">
-            <img
-              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c"
-              alt="Humanitarian Support"
-            />
+            <img src="images/img12.jpeg" alt="Humanitarian Support" />
             <div class="blog-content">
               <span class="tag">Humanitarian Support</span>
               <h3>Restoring Dignity Through Social Empowerment</h3>
@@ -1336,7 +1023,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 From WASH to gender equality and peacebuilding — how IDSL
                 supports vulnerable communities.
               </p>
-              <a href="#" class="read-more">Read More →</a>
+              <a href="blog.html" class="read-more">Read More →</a>
             </div>
           </div>
         </div>
@@ -1352,7 +1039,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <ul>
           <li>
             <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-            Nakuru city off Nakuru-Subukia Road,Grand Canyon Building. Seconf Floor.
+            Nakuru city off Nakuru-Subukia Road,Grand Canyon Building. Second
+            Floor.
           </li>
           <li>
             <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span
@@ -1370,7 +1058,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               class="glyphicon glyphicon-earphone"
               aria-hidden="true"
             ></span>
-            0707613302      
+            0707613302
           </li>
         </ul>
       </div>
@@ -1379,7 +1067,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <ul>
           <li>
             <a
-              href="mailto:info@example.com"
+              href="index.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -1389,7 +1077,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </li>
           <li>
             <a
-              href="mailto:info@example.com"
+              href="index.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -1400,7 +1088,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
           <li>
             <a
-              href="mailto:info@example.com"
+              href="contact.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -1411,7 +1099,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
           <li>
             <a
-              href="mailto:info@example.com"
+              href="donate.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -1421,7 +1109,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </li>
           <li>
             <a
-              href="mailto:info@example.com"
+              href="impact.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -1431,7 +1119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </li>
           <li>
             <a
-              href="mailto:info@example.com"
+              href="events.html"
               style="text-decoration: none"
               onmouseover="this.style.color='#34a853'"
               onmouseout="this.style.color='white'"
@@ -1446,17 +1134,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <p>Visit us anytime connect with us anytime.</p>
         <ul class="social-icons">
           <li><a href="#" class="icon icon-border facebook"></a></li>
-          <li><a href="https://twitter.com/idslinstitute" class="icon icon-border twitter"></a></li>
-          <li><a href="https://instagram.com/idsl.institute" class="icon icon-border instagram"></a></li>
+          <li>
+            <a
+              href="https://twitter.com/idslinstitute"
+              class="icon icon-border twitter"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/idsl.institute"
+              class="icon icon-border instagram"
+            ></a>
+          </li>
           <li><a href="#" class="icon icon-border pinterest"></a></li>
         </ul>
       </div>
       <div class="col-md-3 footer-left-w3-agileits">
         <h3 style="font-family: 'Lora', serif">Newsletter</h3>
         <p>Subscribe to our newsletter for daily updates</p>
-        
 
-        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)" style="flex-direction: row;">
           <input
             type="email"
             class="newsletter-input"
@@ -1492,32 +1189,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Q1UQnLj04A6nmI09HeU3Xf2KqcpFgVmv4++C6bqITnVdFMF3E2aRm59pkl0nUtyr"
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"
+    ></script>
     <script src="js/lsb.min.js"></script>
 
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const serviceLinks = document.querySelectorAll(".services-link");
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceLinks = document.querySelectorAll(".services-link");
 
-  serviceLinks.forEach(link => {
-    const dropdownMenu = link.nextElementSibling;
+        serviceLinks.forEach((link) => {
+          const dropdownMenu = link.nextElementSibling;
 
-    // Toggle menu on click
-    link.addEventListener("click", function (e) {
-      e.preventDefault(); // prevent link jump
-      dropdownMenu.classList.toggle("show");
-    });
+          // Toggle menu on click
+          link.addEventListener("click", function (e) {
+            e.preventDefault(); // prevent link jump
+            dropdownMenu.classList.toggle("show");
+          });
 
-    // Close if clicking outside
-    document.addEventListener("click", function (e) {
-      if (!link.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.remove("show");
-      }
-    });
-  });
-});
-</script>
+          // Close if clicking outside
+          document.addEventListener("click", function (e) {
+            if (!link.contains(e.target) && !dropdownMenu.contains(e.target)) {
+              dropdownMenu.classList.remove("show");
+            }
+          });
+        });
+      });
+    </script>
 
     <script>
       function subscribeNewsletter(event) {
@@ -1697,32 +1394,24 @@ document.addEventListener("DOMContentLoaded", function () {
               title: "Empowering Farmers, Securing Food.",
               subtitle:
                 "Promoting agroecology and eco-friendly practices for resilient livelihoods.",
-              description:
-                "We train communities in soil and water conservation, seed sovereignty, and reducing post-harvest losses.",
             },
             {
               tag: "Climate Action",
               title: "Innovating for a Greener Tomorrow.",
               subtitle:
                 "Building resilience against climate shocks through adaptation and mitigation.",
-              description:
-                "From renewable energy to agroforestry, we support climate-smart solutions that protect people and the planet.",
             },
             {
               tag: "Humanitarian Support",
               title: "Restoring Dignity, Rebuilding Lives.",
               subtitle:
                 "Responding to crises with compassion and sustainable solutions.",
-              description:
-                "We provide emergency aid, clean water, gender inclusion, and peacebuilding for vulnerable communities.",
             },
             {
               tag: "Advocacy & Policy",
               title: "Transforming Food Systems Together.",
               subtitle:
                 "Shaping policies that protect farmers, indigenous knowledge, and the environment.",
-              description:
-                "Through advocacy and collaboration, we promote food sovereignty, equity, and sustainable development.",
             },
           ];
 
@@ -1748,19 +1437,16 @@ document.addEventListener("DOMContentLoaded", function () {
           const tag = document.querySelector(".join-tag");
           const title = document.querySelector(".main-title");
           const subtitle = document.querySelector(".subtitle");
-          const description = document.querySelector(".description");
 
           // Add fade-out effect
           tag.classList.add("text-fade-out");
           title.classList.add("text-fade-out");
           subtitle.classList.add("text-fade-out");
-          description.classList.add("text-fade-out");
 
           setTimeout(() => {
             tag.textContent = content.tag;
             title.textContent = content.title;
             subtitle.textContent = content.subtitle;
-            description.textContent = content.description;
 
             // Add fade-in effect
             tag.classList.remove("text-fade-out");
@@ -1771,14 +1457,12 @@ document.addEventListener("DOMContentLoaded", function () {
             tag.classList.add("text-fade-in");
             title.classList.add("text-fade-in");
             subtitle.classList.add("text-fade-in");
-            description.classList.add("text-fade-in");
           }, 300);
 
           setTimeout(() => {
             tag.classList.remove("text-fade-in");
             title.classList.remove("text-fade-in");
             subtitle.classList.remove("text-fade-in");
-            description.classList.remove("text-fade-in");
           }, 1100);
         }
 
@@ -1812,52 +1496,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.addEventListener("DOMContentLoaded", () => {
         new HeroSlider();
       });
-    </script>
-    <script>
-      const texts = [
-        "Sustainable farming for better lifestyle..",
-        "Join Us in Building a Sustainable Future.",
-        "Together, let's create a Kenya where no one goes hungry",
-        "A nation where nature thrives, and communities prosper.",
-      ];
-      let count = 0;
-      let index = 0;
-      let currentText = "";
-      let letter = "";
-      let speed = 110; // typing speed (ms per letter)
-
-      function type() {
-        if (count === texts.length) {
-          count = 0; // loop back to first word
-        }
-        currentText = texts[count];
-        letter = currentText.slice(0, ++index);
-
-        document.getElementById("typing-text").textContent = letter;
-
-        if (letter.length === currentText.length) {
-          // pause before deleting
-          setTimeout(() => {
-            erase();
-          }, 3000);
-        } else {
-          setTimeout(type, speed);
-        }
-      }
-
-      function erase() {
-        letter = currentText.slice(0, --index);
-        document.getElementById("typing-text").textContent = letter;
-
-        if (letter.length === 0) {
-          count++;
-          setTimeout(type, 500); // pause before typing next word
-        } else {
-          setTimeout(erase, 80); // delete speed
-        }
-      }
-
-      type();
     </script>
 
     <script>
